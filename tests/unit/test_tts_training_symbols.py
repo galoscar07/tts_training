@@ -26,6 +26,22 @@ def test_symbol_set_includes_space_and_punctuation():
     assert set(symbols.phoneme_symbols()) <= full
 
 
+def test_training_characters_include_space_and_manifest_fallbacks(tmp_path):
+    manifest = tmp_path / "train.manifest"
+    manifest.write_text(
+        "wavs/a.wav|dˈa Ă ș|speaker|\n"
+        "wavs/b.wav|tʃ...|speaker|\n",
+        encoding="utf-8",
+    )
+    characters = symbols.training_characters([manifest])
+    assert " " in characters
+    assert "Ă" in characters
+    assert "ș" in characters
+    assert "ˈ" in characters
+    # Punctuation has its own Coqui class and must not be duplicated here.
+    assert "." not in characters
+
+
 def test_characters_config_is_lazy_about_coqui():
     # Without coqui-tts installed, characters_config() must raise a clear
     # ImportError (not fail at module import). With it installed, it returns

@@ -107,6 +107,7 @@ def main(argv: list[str] | None = None) -> None:
         print_step=args.print_step,
         save_step=args.save_step,
         save_n_checkpoints=args.save_n_checkpoints,
+        manifest_paths=manifests,
     )
     config.datasets = [
         BaseDatasetConfig(

@@ -21,6 +21,8 @@ Coqui, lazily.
 from __future__ import annotations
 
 from functools import lru_cache
+from pathlib import Path
+from typing import Iterable
 
 from expressive_tts.preprocess.phonemizer import phoneme_inventory
 
@@ -49,8 +51,33 @@ def symbol_set() -> set[str]:
     return set(phoneme_symbols()) | set(PUNCTUATION) | {" "}
 
 
-def characters_config():
-    """Build Coqui's `CharactersConfig` from the phoneme inventory.
+def symbols_from_manifests(manifest_paths: Iterable[str | Path]) -> set[str]:
+    """Return every character observed in the phoneme column of manifests."""
+    observed: set[str] = set()
+    for manifest_path in manifest_paths:
+        with Path(manifest_path).open(encoding="utf-8") as handle:
+            for raw in handle:
+                parts = raw.rstrip("\n").split("|", 2)
+                if len(parts) >= 2:
+                    observed.update(parts[1])
+    return observed
+
+
+def training_characters(manifest_paths: Iterable[str | Path] = ()) -> str:
+    """Characters class used by VITS.
+
+    It contains the canonical IPA inventory, an explicit word-space token,
+    and every non-punctuation character actually observed in the supplied
+    manifests. The latter safely covers grapheme fallbacks such as Romanian
+    ``Ă``/``ș`` without guessing a partial alphabet.
+    """
+    observed = symbols_from_manifests(manifest_paths)
+    characters = set(phoneme_symbols()) | {" "} | (observed - set(PUNCTUATION))
+    return "".join(sorted(characters))
+
+
+def characters_config(manifest_paths: Iterable[str | Path] = ()):
+    """Build Coqui's `CharactersConfig` from inventory + actual manifests.
 
     Imports Coqui lazily — only needed at training time on the GPU box.
     """
@@ -68,7 +95,7 @@ def characters_config():
         eos=EOS,
         bos=BOS,
         blank=BLANK,
-        characters="".join(phoneme_symbols()),
+        characters=training_characters(manifest_paths),
         punctuations=PUNCTUATION,
         phonemes=None,  # we pre-phonemize; Coqui's phonemizer stays off
     )

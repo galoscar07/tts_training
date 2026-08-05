@@ -15,6 +15,7 @@ Key choices:
 from __future__ import annotations
 
 from pathlib import Path
+from typing import Iterable
 
 from tts_training import LANGUAGE, SAMPLE_RATE
 
@@ -33,6 +34,7 @@ def base_vits_config(
     print_step: int = 50,
     save_step: int = 5000,
     save_n_checkpoints: int = 5,
+    manifest_paths: Iterable[str | Path] | None = None,
     multi_speaker: bool = True,
 ):
     """Return a Coqui `VitsConfig` for base (neutral) training.
@@ -83,7 +85,7 @@ def base_vits_config(
         epochs=epochs,
         text_cleaner=None,          # our text is already normalized/phonemized
         use_phonemes=False,         # bring-your-own phonemizer
-        characters=characters_config(),
+        characters=characters_config(manifest_paths or [manifest]),
         add_blank=True,
         print_step=print_step,
         save_step=save_step,
