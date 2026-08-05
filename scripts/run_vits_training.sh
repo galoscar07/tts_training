@@ -22,12 +22,55 @@ is_running() {
     [ -s "$PID_FILE" ] && kill -0 "$(cat "$PID_FILE")" 2>/dev/null
 }
 
+preflight() {
+    [ -x "$PYTHON" ] || {
+        echo "ERROR: virtual-environment Python not found: $PYTHON" >&2
+        return 1
+    }
+    "$PYTHON" - <<'PY'
+import sys
+
+try:
+    import torch
+    import transformers
+    from transformers.pytorch_utils import isin_mps_friendly  # noqa: F401
+    from TTS.tts.models.vits import Vits  # noqa: F401
+except Exception as exc:
+    raise SystemExit(f"ERROR: training preflight import failed: {exc}")
+
+major = int(transformers.__version__.split(".", 1)[0])
+if major >= 5:
+    raise SystemExit(
+        f"ERROR: transformers {transformers.__version__} is incompatible with "
+        "coqui-tts 0.27.x; install transformers==4.57.6"
+    )
+if not torch.cuda.is_available() or torch.cuda.device_count() < 4:
+    raise SystemExit(
+        f"ERROR: expected 4 CUDA GPUs, found {torch.cuda.device_count()}"
+    )
+
+print(
+    f"Preflight OK: torch={torch.__version__}, "
+    f"transformers={transformers.__version__}, GPUs={torch.cuda.device_count()}"
+)
+PY
+    [ -s "$REPO_ROOT/out/mara.manifest" ] || {
+        echo "ERROR: out/mara.manifest is missing or empty." >&2
+        return 1
+    }
+    [ -s "$REPO_ROOT/out/swara_train.manifest" ] || {
+        echo "ERROR: out/swara_train.manifest is missing or empty." >&2
+        return 1
+    }
+}
+
 start_background() {
     local mode="$1"
     if is_running; then
         echo "VITS is already running (PID $(cat "$PID_FILE"))."
         exit 1
     fi
+    preflight
     rm -f "$PID_FILE" "$LAST_STATUS_FILE"
     local output="$RUN_ROOT/vits_ro_${mode}"
     local log_dir="$output/logs"
@@ -110,6 +153,15 @@ run_training() {
         2>&1 | tee "$train_log"
     local status=${PIPESTATUS[0]}
     set -e
+
+    # coqui-tts-trainer 0.3.3's distributor can return zero even when all
+    # worker subprocesses fail during import/startup.
+    if [ "$status" -eq 0 ] && grep -Eq \
+        'Traceback \(most recent call last\)|ImportError:|ModuleNotFoundError:|CUDA out of memory|RuntimeError:' \
+        "$train_log"; then
+        status=1
+        echo "Controller detected a worker failure in the training log." | tee -a "$train_log"
+    fi
 
     echo "$status" > "$LAST_STATUS_FILE"
     echo "VITS $mode run finished with exit status $status" | tee -a "$train_log"
