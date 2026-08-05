@@ -35,6 +35,7 @@ from tts_training.data.readers import (
     DatasetReader,
     common_voice_reader,
     ljspeech_reader,
+    swara_metadata_reader,
     swara_reader,
 )
 from tts_training.frontend.symbols import symbol_set
@@ -47,6 +48,8 @@ DATASETS: dict[str, DatasetReader] = {
         "catalina/metadata_simple.txt", "catalina/data", "catalina", suffixes=(".WAV", ".wav")
     ),
     "swara": swara_reader,
+    "swara_train": swara_metadata_reader("SWARA_ALL_training.csv"),
+    "swara_test": swara_metadata_reader("SWARA_ALL_testing.csv"),
     "common_voice": common_voice_reader(),
 }
 

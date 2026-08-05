@@ -4,6 +4,7 @@ models — using tiny on-disk fixtures."""
 from tts_training.data.readers import (
     common_voice_reader,
     ljspeech_reader,
+    swara_metadata_reader,
     swara_reader,
 )
 
@@ -69,6 +70,33 @@ def test_swara_reader_central_transcript_convention(tmp_path):
     utts = {u.rel_wav: u.text for u in swara_reader(tmp_path)}
     assert utts["SAM/sam_0001.wav"] == "Prima"
     assert utts["SAM/sam_0002.wav"] == "A doua"
+
+
+def test_swara_flat_metadata_distribution(tmp_path):
+    (tmp_path / "SWARA_ALL.csv").write_text(
+        "bas_rnd1_001.wav|Prima replică\n"
+        "smm_ivan_133.wav|A doua replică\n",
+        encoding="utf-8",
+    )
+    _touch(tmp_path / "wavs" / "bas_rnd1_001.wav")
+    _touch(tmp_path / "wavs" / "smm_ivan_133.wav")
+
+    utts = list(swara_reader(tmp_path))
+    assert [u.rel_wav for u in utts] == [
+        "wavs/bas_rnd1_001.wav",
+        "wavs/smm_ivan_133.wav",
+    ]
+    assert [u.speaker for u in utts] == ["bas", "smm"]
+
+
+def test_swara_metadata_reader_selects_split(tmp_path):
+    (tmp_path / "SWARA_ALL_training.csv").write_text(
+        "mar_rnd3_328.wav|Text de antrenare\n", encoding="utf-8"
+    )
+    utt = next(swara_metadata_reader("SWARA_ALL_training.csv")(tmp_path))
+    assert utt.rel_wav == "wavs/mar_rnd3_328.wav"
+    assert utt.speaker == "mar"
+    assert utt.text == "Text de antrenare"
 
 
 # --- Common Voice ----------------------------------------------------------

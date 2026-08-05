@@ -115,6 +115,13 @@ def swara_reader(corpus_root: Path) -> Iterator[Utterance]:
     SWARA isn't on disk here; this follows its documented layout. Adjust the
     conventions above if your copy differs.
     """
+    # The distributed SWARA_ALL layout is flat: one pipe-delimited metadata
+    # file at the corpus root and every recording under ``wavs/``.
+    flat_metadata = corpus_root / "SWARA_ALL.csv"
+    if flat_metadata.exists():
+        yield from swara_metadata_reader("SWARA_ALL.csv")(corpus_root)
+        return
+
     for speaker_dir in sorted(p for p in corpus_root.iterdir() if p.is_dir()):
         speaker = speaker_dir.name
         central = _swara_transcript_map(speaker_dir)
@@ -131,6 +138,30 @@ def swara_reader(corpus_root: Path) -> Iterator[Utterance]:
             yield Utterance(
                 rel_wav=str(wav.relative_to(corpus_root)), text=text, speaker=speaker
             )
+
+
+def swara_metadata_reader(metadata_rel: str) -> DatasetReader:
+    """Read SWARA's ``filename.wav|transcript`` metadata distribution.
+
+    Files live in ``wavs/`` and the prefix before the first underscore is the
+    stable speaker code (for example ``bas_rnd1_001.wav`` -> ``bas``).
+    """
+    def read(corpus_root: Path) -> Iterator[Utterance]:
+        metadata_path = corpus_root / metadata_rel
+        if not metadata_path.exists():
+            raise FileNotFoundError(f"SWARA metadata not found: {metadata_path}")
+        for filename, text in _read_pipe_metadata(metadata_path, "|"):
+            if not filename:
+                continue
+            basename = Path(filename).name
+            speaker = Path(basename).stem.partition("_")[0].lower() or "swara"
+            yield Utterance(
+                rel_wav=f"wavs/{basename}",
+                text=text,
+                speaker=speaker,
+            )
+
+    return read
 
 
 # --- Common Voice (Mozilla) ------------------------------------------------

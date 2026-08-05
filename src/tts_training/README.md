@@ -53,6 +53,8 @@ python -m tts_training.data.manifest --dataset mara --out out/mara.manifest --ph
 
 # external corpora
 python -m tts_training.data.manifest --dataset swara --corpus-root /data/SWARA --out out/swara.manifest
+python -m tts_training.data.manifest --dataset swara_train --corpus-root /data/SWARA --out out/swara_train.manifest
+python -m tts_training.data.manifest --dataset swara_test --corpus-root /data/SWARA --out out/swara_test.manifest
 python -m tts_training.data.manifest --dataset common_voice --corpus-root /data/cv-ro --out out/cv.manifest
 
 # quick smoke test
