@@ -73,6 +73,15 @@ def main(argv: list[str] | None = None) -> None:
     if len(args.manifest) != len(args.corpus_root):
         parser.error("pass one --corpus-root per --manifest")
 
+    manifests = [path.resolve() for path in args.manifest]
+    corpus_roots = [path.resolve() for path in args.corpus_root]
+    for manifest in manifests:
+        if not manifest.is_file():
+            parser.error(f"manifest does not exist: {manifest}")
+    for corpus_root in corpus_roots:
+        if not corpus_root.is_dir():
+            parser.error(f"corpus root does not exist: {corpus_root}")
+
     # --- Coqui imports (GPU box only) -------------------------------------
     from trainer import Trainer, TrainerArgs
     from TTS.tts.datasets import load_tts_samples
@@ -88,7 +97,7 @@ def main(argv: list[str] | None = None) -> None:
     from tts_training import LANGUAGE
 
     config = base_vits_config(
-        args.manifest[0], args.corpus_root[0], args.output,
+        manifests[0], corpus_roots[0], args.output.resolve(),
         run_name=args.run_name,
         batch_size=args.batch_size,
         eval_batch_size=args.eval_batch_size,
@@ -103,7 +112,7 @@ def main(argv: list[str] | None = None) -> None:
         BaseDatasetConfig(
             formatter="", meta_file_train=str(m), path=str(root), language=LANGUAGE
         )
-        for m, root in zip(args.manifest, args.corpus_root)
+        for m, root in zip(manifests, corpus_roots)
     ]
 
     train_samples, eval_samples = [], []
