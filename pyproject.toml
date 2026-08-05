@@ -40,7 +40,8 @@ ai = [
     # pipeline's emotion source. `torch` is pulled transitively by both
     # `transformers` and `trankit`; pinned here so the emotion layer can be
     # installed without the full `linguistic` extra.
-    "transformers>=4.36",
+    # Coqui TTS 0.27.x imports APIs removed in Transformers 5.
+    "transformers>=4.36,<5",
     "torch>=2.1",
 ]
 ml = [
