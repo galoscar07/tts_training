@@ -1,0 +1,30 @@
+# Lexical markers of formal/legal/administrative Romanian register, used
+# by interjections.py to detect document style (preprocess/objectives.md
+# Phase 10: "Detect document style" / "Disable insertion for academic,
+# legal, technical, and formal text"). One hit is enough to lean the
+# document toward "formal" — see interjections.detect_document_style.
+#
+# Grounded in real phrases from the formal/legal examples already in
+# data/evaluation/ (verified, not guessed): "Astfel, valoarea punctului de
+# pensie se va determina..." (astfel, se va), "...cu excepția celor
+# stagiari, în condițiile legii." (cu excepția, condițiile legii). The
+# rest are standard, well-known Romanian legal/administrative vocabulary
+# not directly present in our small sample but reasonably high-confidence
+# (analogous precedent to intensifiers.yaml).
+- astfel
+- conform
+- potrivit
+- cu excepția
+- condițiile legii
+- articolul
+- alineatul
+- prezenta
+- prezentei
+- subsemnatul
+- se va determina
+- se stabilește
+- dispune
+- stipulează
+- hotărăște
+- în conformitate cu
+- prevederile

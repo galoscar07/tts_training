@@ -1,0 +1,59 @@
+# Canonical Romanian phoneme inventory (objectives.md Phase 4).
+#
+# Built empirically, not guessed: ran `espeak -v ro --ipa` over the ~9,590
+# distinct words appearing in datasets/mara, datasets/hria/catalina, and
+# collected every distinct IPA symbol actually produced. Any symbol the
+# phonemizer emits that isn't in this list is flagged as an unknown
+# phoneme (objectives.md acceptance criterion: 0% unknown-phoneme rate).
+#
+# `y` and `ç` appear only a handful of times, from English/French loanwords
+# embedded in otherwise-Romanian conversational text (code-switching is
+# present in datasets/hria) — real observed output, not errors.
+
+suprasegmental:
+  - "ˈ"  # primary stress (precedes the stressed syllable's onset)
+  - "ˌ"  # secondary stress
+
+modifier:
+  - "ʲ"  # palatalization
+
+vowels:
+  - a
+  - ə   # schwa ("ă")
+  - e
+  - i
+  - ɨ   # ("î"/"â")
+  - o
+  - u
+  - ɔ   # open-mid back (diphthong component, e.g. "oa")
+  - ɪ   # near-close near-front (diphthong component, e.g. "ai")
+  - ʊ   # near-close near-back (diphthong component, e.g. "au")
+  - y   # rare: loanwords
+
+consonants:
+  - b
+  - d
+  - f
+  - ɡ   # voiced velar stop (U+0261, not ASCII "g")
+  - h
+  - j
+  - k
+  - l
+  - m
+  - n
+  - p
+  - r   # trilled/emphatic r
+  - ɾ   # alveolar tap r (more common realization)
+  - s
+  - ʃ
+  - t
+  - v
+  - w
+  - z
+  - ʒ
+  - ŋ
+  - ç   # rare: loanwords
+
+# Informational only (not used for validation, which is per-character):
+# common affricates are sequences, not single symbols — "tʃ" (ce/ci, ch)
+# and "dʒ" (ge/gi, ge/gi) are written as their component consonants.

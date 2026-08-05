@@ -1,0 +1,25 @@
+# Interjection lemma -> emotion vote (existing interjections,
+# preprocess/objectives.md Phase 6: "Recognize existing interjections").
+# `weight` is relative to a single lexicon-word vote (1.0 = same strength).
+#
+# Matched by dictionary lookup, not Stanza's INTJ tag: the RRT-trained
+# parser reliably mistags informal interjections like "Uau" as a vocative
+# NOUN (verified directly — see preprocess/README.md), so gating on
+# UPOS=="INTJ" would silently drop most real interjection evidence.
+#
+# "vai" is genuinely ambiguous in Romanian (distress *or* excited surprise
+# depending on tone/context — real example from data/evaluation:
+# "Vai, Chris, sunt gata de mult timp!" is a *happy*-labeled sentence).
+# Mapped to "surprise" with reduced weight rather than committing to a
+# specific valence, since surprise is compatible with both readings.
+uau: {label: surprise, weight: 1.0}
+oau: {label: surprise, weight: 1.0}  # common phonetic spelling variant of "uau"
+vai: {label: surprise, weight: 0.5}
+bravo: {label: happy, weight: 1.0}
+super: {label: happy, weight: 0.8}
+ura: {label: happy, weight: 1.0}
+haha: {label: happy, weight: 0.9}
+of: {label: sad, weight: 0.7}
+aoleu: {label: fear, weight: 0.8}
+ah: {label: surprise, weight: 0.4}
+oh: {label: surprise, weight: 0.4}

@@ -1,0 +1,17 @@
+# Default preprocessing profile: every layer currently implemented.
+# See readme.md section 1.3. Requesting "interjections" here is safe by
+# construction — `interjection_mode` defaults to "disabled" on
+# PreprocessPipeline.process(), so no suggestions are produced unless the
+# caller explicitly opts in (preprocess/objectives.md Phase 10 acceptance
+# criterion: "Suggestions are disabled by default"). "context" is also
+# additive/safe — it never modifies Sentence.emotion, only adds a separate
+# Sentence.context_emotion field (Phase 11).
+include:
+  - normalized
+  - linguistic
+  - lexical_stress
+  - emotion
+  - focus
+  - prosody
+  - interjections
+  - context

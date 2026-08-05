@@ -1,0 +1,17 @@
+# Known lexical-stress corrections, keyed by lowercased word.
+# Checked before the espeak-derived stress. Each entry:
+#   word:
+#     syllables: [list of syllables]
+#     stressed_syllable_index: 0-based index into `syllables`
+#
+# Deliberately empty for now: spot-checking espeak's default Romanian
+# stress against datasets/mara and datasets/hria/catalina vocabulary
+# (proper names included) didn't turn up incorrect cases worth overriding.
+#
+# Known unresolved case (documented, not "fixed" here): "copii" is a
+# homograph — "copii" (children, co-PII) vs "copii" (copies of "copie",
+# CO-pii). espeak has no sentence context and defaults to one reading;
+# disambiguating requires word-sense information this project doesn't
+# model yet, so no blanket override is applied (adding one would just
+# silently break the other sense). See
+# src/expressive_tts/preprocess/stress.py and data/evaluation/README.md.

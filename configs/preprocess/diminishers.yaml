@@ -1,0 +1,10 @@
+# Romanian diminishing expressions -> weight multiplier applied to the
+# following content word's emotion-lexicon vote (preprocess/objectives.md
+# Phase 6: "Implement diminishing expressions"). Same key convention as
+# intensifiers.yaml (space-joined keys checked first).
+puțin: 0.6
+oarecum: 0.7
+ușor: 0.7
+cam: 0.75
+relativ: 0.8
+destul de: 0.85

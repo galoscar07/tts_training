@@ -1,0 +1,58 @@
+# Measurement-unit symbol -> spoken form.
+# `gender` is the noun's grammatical gender, used to pick the correct
+# numeral form: "masculine" (un leu, doi lei), "feminine" (o oră, două ore),
+# or "neuter" (un kilogram, două kilograme — Romanian neuter nouns take the
+# masculine article in the singular but feminine numeral agreement in the
+# plural). See numbers_ro.count_phrase.
+kg:
+  singular: kilogram
+  plural: kilograme
+  gender: neuter
+g:
+  singular: gram
+  plural: grame
+  gender: neuter
+mg:
+  singular: miligram
+  plural: miligrame
+  gender: neuter
+t:
+  singular: tonă
+  plural: tone
+  gender: feminine
+km:
+  singular: kilometru
+  plural: kilometri
+  gender: masculine
+m:
+  singular: metru
+  plural: metri
+  gender: masculine
+cm:
+  singular: centimetru
+  plural: centimetri
+  gender: masculine
+mm:
+  singular: milimetru
+  plural: milimetri
+  gender: masculine
+l:
+  singular: litru
+  plural: litri
+  gender: masculine
+ml:
+  singular: mililitru
+  plural: mililitri
+  gender: masculine
+h:
+  singular: oră
+  plural: ore
+  gender: feminine
+min:
+  singular: minut
+  plural: minute
+  gender: neuter
+s:
+  singular: secundă
+  plural: secunde
+  gender: feminine

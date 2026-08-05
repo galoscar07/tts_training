@@ -1,0 +1,10 @@
+# readme.md section 1.3 "pronunciation" profile: normalized text,
+# phonemes, syllables, lexical stress. `lexical_stress` transitively pulls
+# in normalized/tokens/phonemes/syllables via the registry's dependency
+# resolution (registry.py), so listing it alone would suffice — the other
+# entries are kept for readability.
+include:
+  - normalized
+  - phonemes
+  - syllables
+  - lexical_stress

@@ -1,0 +1,33 @@
+# Runtime dependencies
+pydantic>=2.6
+pyyaml>=6.0
+
+# Optional: linguistic analysis (tokens/lemma/POS/dependencies), phonemization,
+# and lexical stress (Phases 3-5). Two interchangeable backends — Trankit
+# (transformer, XLM-RoBERTa; preferred) and Stanza (neural; fallback). Trankit
+# 1.1.1 crashes on import under Python 3.11+, so on Python 3.13 the layer
+# falls back to Stanza automatically. Install whichever matches your Python
+# and download its model (scripts/download_{trankit,stanza}_model.py).
+# Heavy (pulls torch). Phonemization/stress also need `espeak` on PATH.
+trankit>=1.1 ; python_version < "3.11"
+stanza>=1.14
+
+# Optional: transformer emotion classifier (Phase 6/7) — a multilingual
+# XLM-RoBERTa emotion model run locally via HuggingFace transformers. Pulls
+# torch (shared with trankit). One-time model download on first use.
+transformers>=4.36
+torch>=2.1
+
+# Optional: needed by scripts/fetch_emotion_lexicon.py to read the NRC EmoLex
+# .xlsx translation file, consumed by focus.py's emotion-bearing word lookup
+# (Phase 8). Not required by the transformer emotion layer.
+openpyxl>=3.1
+
+# Optional: only needed by scripts/train_emotion_classifier.py and
+# scripts/evaluate_emotion_classifier.py (Phase 7, optional trained emotion
+# classifier). Not required at pipeline runtime — the trained model was not
+# adopted into the pipeline itself (see data/evaluation/emotion_classifier_report.md).
+scikit-learn>=1.4
+
+# Development dependencies
+pytest>=8.0

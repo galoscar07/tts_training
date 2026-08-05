@@ -1,0 +1,25 @@
+# Currency symbol/code -> spoken form.
+lei:
+  singular: leu
+  plural: lei
+  gender: masculine
+ron:
+  singular: leu
+  plural: lei
+  gender: masculine
+"€":
+  singular: euro
+  plural: euro
+  gender: masculine
+eur:
+  singular: euro
+  plural: euro
+  gender: masculine
+"$":
+  singular: dolar
+  plural: dolari
+  gender: masculine
+usd:
+  singular: dolar
+  plural: dolari
+  gender: masculine

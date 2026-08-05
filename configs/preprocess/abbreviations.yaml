@@ -1,0 +1,21 @@
+# Abbreviation (without trailing period) -> spoken expansion.
+# Matching is case-insensitive on the abbreviation as written; the expansion
+# preserves the sentence's capitalization convention only for the first
+# letter (see normalizer.py).
+dr: doctor
+prof: profesor
+ing: inginer
+d-na: doamna
+d-nul: domnul
+nr: numărul
+art: articolul
+pag: pagina
+str: strada
+bd: bulevardul
+sec: secolul
+etc: etcetera
+ex: exemplu
+cf: conform
+vol: volumul
+cap: capitolul
+fig: figura

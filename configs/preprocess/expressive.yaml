@@ -1,0 +1,12 @@
+# readme.md section 1.3 "expressive" profile: emotion, intensity, focus,
+# prosody, interjections, context. All implemented as of Phase 11.
+# `interjection_mode` still defaults to "disabled" unless passed explicitly
+# to PreprocessPipeline.process(); context smoothing is additive and never
+# discards Sentence.emotion, so including it here is safe by construction.
+include:
+  - emotion
+  - intensity
+  - focus
+  - prosody
+  - interjections
+  - context

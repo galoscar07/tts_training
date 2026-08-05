@@ -1,0 +1,4958 @@
+[
+  {
+    "text_id": 1,
+    "text": "Ce panică!",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.66,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.33
+    }
+  },
+  {
+    "text_id": 15,
+    "text": "Antrenamentele cognitive sunt extrem de utile, dar pot fi și foarte distractive.",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.33,
+      "happy": 0.66
+    }
+  },
+  {
+    "text_id": 17,
+    "text": "Ca orice lucru nasol, incepe lunea",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 23,
+    "text": "Prima zi la terasă – au stat la coadă la fast – food și la",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 34,
+    "text": "ce zambet frumos are aceasta doamna",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 1.0
+    }
+  },
+  {
+    "text_id": 44,
+    "text": "Râurile Prut și Nistru au inundat 5 sate din nordul Republicii Moldova / Imagini dramatică cu inundațiile din Speia: Apele au înghițit și câteva cruci",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 0.66,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 45,
+    "text": "Azi e o zi minunată. Poveste cu tâlc, despre atitudine pozitivă, mulţumire şi apreciere …",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.33,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 53,
+    "text": ": din Bucureşti a speriat \" presa miluită \" cu fonduri de la Guvern-",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 1.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 54,
+    "text": "Reţeaua teroristă Stat Islamic revendică atacul din Afganistan, soldat cu 29 de morţi",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.33,
+      "fear": 0.66,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 66,
+    "text": "Chiar dacă avem de respectat distanțarea fizică, atingerile ne definesc umanitatea",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 67,
+    "text": "Este trist ce se întâmplă-n lume.",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 0.66,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 90,
+    "text": "Patru decenii am patimit din cauza tantarilor in Bucuresti si cand, in sfarsit, e liniste in sensul asta, se-apuca \" toti \" sa se planga de tantari. Ba, ai dreq! 🤣 🤣 🤣",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 92,
+    "text": "Tremura chilotii economiei mondiale. Va dam cozonaci si biscuiti, nu grau si",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 1.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 100,
+    "text": "Băi tefelisti iubitori de muie din marketing, piar si advărtaizing: \" detoxifiaza \" nu exista in limba română, doar DETOXIFICA (el/ea)... măcar folosiți în plm dexonlinul ăla, tefelist ca și voi",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 1.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 103,
+    "text": "Zeci de doctori spuneau în cor că e imposibil să se mai prindă viață în biata femeie",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 0.66,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 106,
+    "text": "Da.:) Important e să fii tu satisfăcută și cu înghețata mâncată",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.33,
+      "happy": 1.0
+    }
+  },
+  {
+    "text_id": 107,
+    "text": "Mă bucur că nu sunt singura enervată de chestia asta. Chiar nu mi se pare fair.",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.66,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.33
+    }
+  },
+  {
+    "text_id": 118,
+    "text": "Până în prezent, Tesla a fabricat 1 milion de mașini electrice, a anunțat CEO-ul pe Twitter, în prima zi a lunii martie 2020 ❗ ️ ℹ️ tehnostiri upb1818 TeslaModelY ElectricVehicle",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.33,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 120,
+    "text": "O samă de prieteni geniali, simpatici și ingenioși! ❤ ️ ❤ ️ ❤ ️ ❤ ️ ❤ ️",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.33,
+      "happy": 1.0
+    }
+  },
+  {
+    "text_id": 126,
+    "text": "păi pari irascibil, de aia, nu e funny să te cerți cu toată lumea, mai bine pune și tu o rețetă exotică..",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.66,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 135,
+    "text": "💘 Dragostea este bucuria de a face altora bucurie. 💘",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.33,
+      "happy": 1.0
+    }
+  },
+  {
+    "text_id": 136,
+    "text": "e fantoma de aseară care se juca cu mingea:o",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.33,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 139,
+    "text": "FOTO Opt decenii de la „ marele cutremur ”. din noaptea care a îndurerat România",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 0.33,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 141,
+    "text": "Incendiul de la \" Matei Bals \". care a alarmat pompierii spune ca au explodat niste tuburi de oxigen",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 0.66,
+      "surprise": 0.33,
+      "fear": 0.33,
+      "angry": 0.33,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 146,
+    "text": "Răsturnare totală de situaţie! Verdictul oficial privind pandemia e zguduitor. Când vom scăpa de COVID",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.33,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 159,
+    "text": "Eu sunt in zodia LEMNULUI in nu știu ce zodiac...",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.33,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.33,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 163,
+    "text": "Specialisti pe dreq-imbecili ingrozitor de usor de manipulat, care ne costa pe restul timp, nervi, sanatate, bani... Siasta doar pentru ca au banalul drept de vot! 😎",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 1.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 187,
+    "text": "Accident teribil! Un bărbat și-a pierdut viața după ce s-a răsturnat cu mașina într-un râu",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 0.66,
+      "surprise": 0.33,
+      "fear": 0.33,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 190,
+    "text": "5 din 10 vindecați de COVID prezintă simptome de oboseală, anxietate şi depresie după însănătoşire. STUDIU",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 201,
+    "text": "Hârtia de copt este cerată... filtrul de cafea merge. Ne adaptăm",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 1.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 206,
+    "text": "Vorbești de încredere și loialitate, dar tu i-ai ars pe toți 🤦🏻‍♀️🤐",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.66,
+      "neutral": 0.0,
+      "trust": 0.33,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 219,
+    "text": "La mulți ani! Sănătate, veselie și mult noroc! Chef mare să fie!",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 1.0
+    }
+  },
+  {
+    "text_id": 225,
+    "text": "s-au epuizat măștile de pe emag. in cat timp apar roditorii cu \"e o minciuna, au avut 3 bucati\"?",
+    "emotion": "surprise",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.66,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 226,
+    "text": "Doliu în cinematografia românească: „Ne-a părăsit o actriță excepţională, un suflet nobil, un om extraordinar”",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.33
+    }
+  },
+  {
+    "text_id": 240,
+    "text": "Nu cred ca e exact citatul,dar cred ca ne putem bizui pe el.",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.33,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 267,
+    "text": "Mărturia cutremurătoare a unui supraviețuitor al atacului terorist din Germania: „ Frate, nu îmi mai simt limba. Nu pot să respir! ”",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 1.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 278,
+    "text": "O întâmplare înspăimântătoare",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.66,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 288,
+    "text": "Nu-i așa că e distractiva? Ca o gală de umor!",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.33,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.66
+    }
+  },
+  {
+    "text_id": 292,
+    "text": "Protest al agricultorilor dobrogeni. Seceta le-a distrus mai mult de jumătate din culturi",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 1.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 304,
+    "text": "ma gandesc ca trebuie sa dau bacu la istorie si ma ia groaza....",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 1.0,
+      "angry": 0.33,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 305,
+    "text": "Este, dar pe total este deprimant ce vezi. Cand știi cum au fost unele locuri si cum arara acum, iti vine asa o stare de sictir fata de.",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.33,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 307,
+    "text": "Faţa acestui individ ma revolta mult mai puţin decat feţele celor care au contribuit moral la aceasta atrocitate. Acele feţe e important sa le si sa nu le uităm.",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 1.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 310,
+    "text": "Cămăși cu mâneca lungă. Ești în căutarea unei cămăși office sau casual? acum noile modele de cămăși!",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.33,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 317,
+    "text": "Coronavirusul ne-a mâncat zilele, seceta ne-a mâncat recoltele...",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.33,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 323,
+    "text": "copilul meu arată uimitor ca întotdeauna 🥰🥰🥰🥺",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.33,
+      "happy": 1.0
+    }
+  },
+  {
+    "text_id": 334,
+    "text": "VIDEO Beirutul a fost cutremurat de o noua explozie",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.33,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 347,
+    "text": "Ce am și eu fobie socială aiurea",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 1.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 351,
+    "text": "Stăteam așa și mă gândeam: cred că ultima oară când România a fost la Mondiale, în Europa nu existau atâtea țări câte s-au calificat la Europeanul ăsta 🤔",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 379,
+    "text": "Oricând și oriunde ai nevoie, trecerea de la mobile la laptop se face instant cu și Samsung Dex. Vezi, aici, cum:",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.33,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 382,
+    "text": "sfâșiată de durere, după moartea dintre cele mai dragi: „ Ai plecat prea devreme ”...",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 394,
+    "text": "Mesaj ciudat, găsit de o femeie pe coșul de gunoi. Au trecut-o reci pe șira spinării când a aflat ce înseamnă...",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 1.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 401,
+    "text": "EXCLUSIV Dinamo tremură! Amenzi DRACONICE pentru cluburile din Liga 1 care vor avea cazuri de coronavirus!",
+    "emotion": "surprise",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.66,
+      "fear": 0.33,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 404,
+    "text": "Când mai vorbiți de secetă și de foamete uitați-vă la aceste imagini.",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 0.66,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 410,
+    "text": "Orasul are ceva linistitor care ma binedispune si imi aduce aminte de rockereala din tinerete 🎠🎭🏰",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.33,
+      "happy": 0.66
+    }
+  },
+  {
+    "text_id": 422,
+    "text": "Cum arată Vulpița de la Acces Direct fără niciun strop de machiaj. Ce detaliu se observă pe fața ei...",
+    "emotion": "surprise",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.66,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 426,
+    "text": "Erau făcute la noi:) am avut și eu un model mai vechi puțin, ajunsesem până la a-i schimba cărbunii de la rotor ca sa îl mai avem încă cinci ani printre noi, era al șaptelea om de nădejde",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.33,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 433,
+    "text": "BREAKING NEWS / ATAC TERORIST în Londra – Mai mulți ar fi fost înjunghiați iar a fost împușcat! prin",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 0.66,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 437,
+    "text": "O puternică și urâtă luptă fratricidă a izbucnit în PNL pe zona Educației (surse)",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.33,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 438,
+    "text": "pe mn ma doare n pula si cu aia pornita si cu aia oprita stau in pat ca vaca indiferent ce o sa mi faca, ma dau afara din clasa?",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 1.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 446,
+    "text": "Daca spunem nu, nu suntem obligati. De multe ori ne aruncam singuri in",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.33,
+      "neutral": 0.66,
+      "trust": 0.33,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 452,
+    "text": "Cutremur puternic la Teheran. Doi morţi și 22 de răniţi-",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.33,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 465,
+    "text": "La mulți ani, sănătate și muze binevoitoare!",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 1.0
+    }
+  },
+  {
+    "text_id": 468,
+    "text": "Triplul proiector cu laser de la Samsung este uimitor",
+    "emotion": "surprise",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.66,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.33
+    }
+  },
+  {
+    "text_id": 473,
+    "text": "Și... în cât timp credeți că o să avem primele cazuri de coronavirus în România? Eu nu cred că mai durează mult. Și cred că o să fie nasol tare.",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 1.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 490,
+    "text": "Parcul Libertății s-a umplut de veselie și culoare-Expoziții în aer liber",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 1.0
+    }
+  },
+  {
+    "text_id": 497,
+    "text": "Am căutat, într-adevăr oribil. 😬",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 0.66,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 518,
+    "text": "Pai da, vom fii “ pa ” mulți dintre noi dar, cred ca au fost marsavi. Au dat moca, l-au îmbunătățit, iar acum te condiționează, in cazul asta (hai sictir whatsapp)",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 1.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 525,
+    "text": "De ce ar fi diferit dacă o facem la fel? Așa măcar sunt mulțumit că parlamentul arată oficial cum erlste de mult: ilegitim și non-reprezentativ.",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.33
+    }
+  },
+  {
+    "text_id": 539,
+    "text": "E o musca cat rasadirea ma-sii de mare in apartament si eu am o fobie de muste. Great.",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.66,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 543,
+    "text": "Secretar de stat din ministerul Educației, după ce a spus că „ un fără meditaţii ar fi putut să ia 5-6 ” la proba de matematică: „ A fost o exprimare nefericită ” news stiri romania",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 544,
+    "text": "Ce băiat frumos, să ai parte de fericire alături de 🥰",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.33,
+      "happy": 1.0
+    }
+  },
+  {
+    "text_id": 554,
+    "text": "Din starea de jale în care se afla sufletul românului nu putem cere decât mila și time de pocăință.",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 561,
+    "text": "Nu vrei sa-i dai individului senzatia ca iti este frica, fiindca il face sa fie si mai hotarat pe urmele tale",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.66,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 565,
+    "text": "E criminal de traumatizant. E mai rău ca un abator, vai de bietele lăuze. Și pe deasupra, personalul abrutizat, nesimțit în ultimul hal și pus pe șperț. Cică bucuria de-a fi mamă...",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.66,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 568,
+    "text": "Sunt dezamăgită, tristă și lăsată deoparte. Sunt în centru atenției doar când fac o prostie sau dăruiesc cadouri, dar când am nevoie de cineva nu e nimeni acolo..... de ce?",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 570,
+    "text": "N-auzi romane cum plange natia ta? via",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 0.66,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 578,
+    "text": "Asa se intampla mai mereu, din nefericire. Putini sunt cei care acorda atenție, iar cand ajung cei multi sa se preocupe de o problema este deja prea tarziu.",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 585,
+    "text": "Cand m-am uitat in ziar si am vazut ca avem golaveraj 0..! a IZBUCNIT la conferinta de presa! CFR-ului lanseaza un atac violent la adresa FRF: Rade toata lumea de noi!",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.66,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 596,
+    "text": "Inca un motiv sa vad calitatea oamenilor,, oameni nu sunt buni,, dau credit si crezare la ce spun de multe ori si pun oarecum in balanta spusele lor,, eu spuneam oricui,, esti murdara cu ruj",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 0.66,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 598,
+    "text": "E sefa BCE, cica, dar am aflat cu stupoare ca nu e chiar asa batrana, are doar 64 de ani, desi arata de 80+! 😎",
+    "emotion": "surprise",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.66,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.33
+    }
+  },
+  {
+    "text_id": 603,
+    "text": "Anunțul care ne dă fiori! COVID-19 poate fi transmis chiar înainte ca … Ultimul studiu a relevant-o...",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 1.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 606,
+    "text": "Distracție maximă atât pentru cei mici cât și pentru cei mari! Petrece o zi plină de distracții și amuzament la Alanya Aqua Park Okurcalar!",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.66
+    }
+  },
+  {
+    "text_id": 610,
+    "text": "urasc orele online asa de mult",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.66,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 617,
+    "text": "Caz tragic în Craiova! O s-a sinucis. Trei ani s-a luptat cu o depresie cruntă...",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 627,
+    "text": "pentru zilele din Postul Crăciunului – Supă cremă de linte roşie",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.33,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 651,
+    "text": "Da sunt bucuroasa, am gasit deosebiti dar diferiti si toti au o poveste frumoasa care le demonstreaza bun. Daca nu as fi asa oc",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.33,
+      "happy": 0.66
+    }
+  },
+  {
+    "text_id": 654,
+    "text": "Când arma este în mâna nebunului, stiloul în mâna idiotului și prea multă sinceră încredere,cu asta ne vom alege!",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.33,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 662,
+    "text": "Impact teribil! A murit pe loc! (Foto)",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 0.66,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 679,
+    "text": "Sună odios, este odios și, din nefericire, rămâne odios.",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 0.66,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.33,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 682,
+    "text": "e, e foarte trist",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 687,
+    "text": "what the actual fuck!? Ați introdus o mizerie de validare peste validare a validării plăților. Ce plm??? De câte ori aa introduc parola ca sa validez o nenorocita plata de 100 de lei?",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 1.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 692,
+    "text": "am apasat din greseala pe da crezand ca e nu 😭 😭 😭 😭",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 704,
+    "text": ": Danemarca, îngrijorată de creşterea numărului de cazuri legate noua tulpină a SARS-CoV-2",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 1.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 707,
+    "text": "DIGI Romania: Anuntul IMPORTANT de AZI pentru Toti Clientii - peblog romania 2020 news stiri",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 711,
+    "text": "Demiterea,, este o decizie unilaterală și imatură a care pune sub semnul întrebării capacitatea domniei sale de a conduce un guvern de coaliție funcțional.",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 713,
+    "text": "Abia am auzit și eu de ASMR și sunt consternată... Acest video are 34 mil. de vizualizări. Wow! Sunt și persoane care fac în limba română... clar sunt superficială, deoarece mie îmi vine să râd.😂",
+    "emotion": "surprise",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 1.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.33
+    }
+  },
+  {
+    "text_id": 721,
+    "text": "Apelul disperat al unui doctor detasat intr-o sectie COVID-19: Am fost devastata vazand cu ochii mei acest cosmar. Astept mobilizare, asa cum am facut eu, pentru a ajuta sectiile in criza",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.0,
+      "fear": 0.33,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 726,
+    "text": "Iti mulțumesc că îmi oferi bunătate de cafea... că fără ea nu funcționez! ⚘ ☕ ☕ ☕ ☕ 🙏 🍀 👍",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 1.0
+    }
+  },
+  {
+    "text_id": 735,
+    "text": "Mulţumim pentru că aţi creat Ford Family Fun Hub, un website dedicat activităţilor distractive de încercat în perioadele de izolare atât de copii, cât şi de părinţi. 🇺 🇸 ♥ ️ 🇷 🇴 SUAPentruRomania",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.66
+    }
+  },
+  {
+    "text_id": 737,
+    "text": "Nu ai mâncat niciodată mâncare gătită la ceaun? Este rețetă românească, nu e pizza să vezi fiecare componentă 🤣",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.33
+    }
+  },
+  {
+    "text_id": 742,
+    "text": "război cu fostul soț: bdquo;Îmi trimite mesaje de amenințare și intimidare",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.33,
+      "fear": 1.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 751,
+    "text": "Europa ar trebui să treacă la săptămâna de lucru de 4 zile, cer sindicatele într-o scrisoare adresată politici",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.33
+    }
+  },
+  {
+    "text_id": 758,
+    "text": "HAI LA MARE, VREMEA ESTE SUUUPER! Asa ma desfat eu acum: sus pe fly la plaja. am avut program de aprovizionare si crestere. Adica am facut cumparaturi si apoi bagat in pat si am dormit bustean. Am …",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 1.0
+    }
+  },
+  {
+    "text_id": 768,
+    "text": "uite aici cum coreenii au rezolvat criza, divizând în 4 categorii. 80% nu au nevoie de spitalizare au zis ei și i-au trimis în locații de-ale corporațiilor (LG, Samsung)",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 773,
+    "text": "Bag p \" \" \" \" \" \" în ele de țigări, la nervi, într-o zi o să le fumez pe toate să nu mai fie niciuna",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 1.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 777,
+    "text": "Student teolog uimește juriul la „ Aleg muzica. Rămân un om al Bisericii ”",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 778,
+    "text": "Bucurii tuturor...şi nădejde ❤ Iar mai presus de toate e dragostea. Crăciun fericit 🎄",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.33,
+      "happy": 0.66
+    }
+  },
+  {
+    "text_id": 779,
+    "text": "Coronavirusul a creat panica in toata lumea! a reactionat dur",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 1.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 800,
+    "text": "Ce milă imi este 😔 😔",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 808,
+    "text": "Frica este cea mai mare armă a diavolului",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.66,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 830,
+    "text": "Ce cadouri îşi doresc bărbaţii de Crăciun",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 1.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 831,
+    "text": "De asemenea zambeste mult si fi fericita ♥ ༄Ai un zambet frumos... arata-l ༄zambetul arata fericirea fetei Este uimitor",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.33,
+      "happy": 1.0
+    }
+  },
+  {
+    "text_id": 836,
+    "text": "Un om de ştiinţă respectat devine şef de Cercetare şi Dezvoltare la Samsung",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 1.0,
+      "trust": 0.33,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 840,
+    "text": "Iaca, nu vreau! Mă f. de urgență în ordonanțele voastre ilegale! Ai ceva-mpotrivă, Orbane?? Ia, hai, luați și voi muie, secăturilor!",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 1.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 849,
+    "text": "PARTIDUL MIȘCAREA POPULARĂ ÎI ASIGURĂ PE ROMÂNII DIN DIASPORA DE SPRIJIN TOTAL",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.33,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 850,
+    "text": "200 de previziuni care vor zgudui lumea in anul 2020",
+    "emotion": "surprise",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.66,
+      "fear": 0.33,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 854,
+    "text": "Ambasadorul SUA: Reforma justiției necesită curaj și acțiuni concrete",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 1.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 864,
+    "text": "Poveste de dragoste tristă care te face să plângi, impresionantă 😭 via",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 873,
+    "text": "EUFORIE! aplaudă deja la decolare, nu la aterizare!",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.33,
+      "happy": 0.66
+    }
+  },
+  {
+    "text_id": 888,
+    "text": "Oau, așa arată ploaia?",
+    "emotion": "surprise",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.66,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 893,
+    "text": "Acum o săptămână am avut eu, nu pot să spun că era o simplă răceală, că era destul de nasol...",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 0.33,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 894,
+    "text": "Ultimul bilanț din China este cutremurător. Câți oameni a omorât coronavirusul",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 0.66,
+      "surprise": 0.0,
+      "fear": 0.33,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 897,
+    "text": "Cu plăcere! 💫 💫 💫",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 1.0
+    }
+  },
+  {
+    "text_id": 900,
+    "text": "Câștigă un super laptop MacBook Air și bucură-te de tarife speciale la gaz și electricitate, cu Enel-",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 1.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 901,
+    "text": "Eu personal simt o durere în suflet! Ce chin ce vremuri și cum am fost crescuți de greu!",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 0.66,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 908,
+    "text": "Pofta sau Foame \" e un restaurant ieftin si bun in Bv. 🍻",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.33,
+      "happy": 0.33
+    }
+  },
+  {
+    "text_id": 927,
+    "text": "Dragoste cu năbădăi: Cum s-au dat pe mâna două beiușence, din pricina unui arab",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.33,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 929,
+    "text": "Sunt 600 000 de buletine de vot pentru diaspora, câte 5 000 pentru fiecare secție, iar la unele secții se pare că vor fi epuizate mult înainte de ora 21.",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 1.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 936,
+    "text": "Informațiile false se răspandesc foarte repede în aceste zile, așa că mulți dau crezare informațiilor neverificate și teoriilor lansate de diverși conspirationişti. prin",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 939,
+    "text": "Bună seara prieteni! Iată noua cultură de toamnă👍😅😅😅 Seară voastră prieteni să fie perfectă, înconjurați de iubire să fiți și beți un pahar cu vin, în cinstea voastră!👍🍷🥰",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 1.0
+    }
+  },
+  {
+    "text_id": 941,
+    "text": "după ce te uiți la ăsta îți va fi frică să mai dormi",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 1.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 945,
+    "text": "Halucinant scorul asta abrupt al AUR!",
+    "emotion": "surprise",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 1.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 947,
+    "text": ": Transmit un mesaj de revoltă şi indignare faţă de decizia Senatului de a amâna dezbaterea Legii carantinării şi izolării",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 1.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 948,
+    "text": "Omul prost se simte întotdeauna... frustrat...!!",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.33,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 957,
+    "text": "De ce m-o enervat rau faza asta ajutor-",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 1.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 964,
+    "text": "Biblioteca Națională a Republicii Moldova vă invită la Expoziția - eveniment “ PATRIMONIU ȘI EDUCAȚIE: SĂ ÎNVĂȚĂM PENTRU VIAȚĂ ” |",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.33,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 968,
+    "text": "Observ cu mahnire ca sunt din ce in ce mai multi..",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 971,
+    "text": "VIDEO Scene de groază în SUA. Un URIAŞ a intrat în protestatari",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.66,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 980,
+    "text": "Fotbal: Sevilla învinge liderul Atletico Madrid şi relansează lupta pentru titlu în Primera Division-",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 1.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 986,
+    "text": "Universitatea Craiova - CFR Cluj, \" finala campionatului \", se va disputa în această seară, de la ora 20:30, ÎN DIRECT la Digi Sport 1.",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 1.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 997,
+    "text": "Hai sictir pupincuristul nazistului",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 1.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1000,
+    "text": "ÎNGRIJORARE în rândul din zona minieră",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 1.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1009,
+    "text": "“ Sunt nefericită, a nimănui, tristă, îndurerată. ” Asta voiai să auzi, nu?!",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1018,
+    "text": "Baie cu spumă și lumânări este o desfătare nobilă",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 1.0
+    }
+  },
+  {
+    "text_id": 1021,
+    "text": "Da, pe deoparte era dezolant, pe de alta era liniște, plăcut",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 0.66,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.33,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1022,
+    "text": "70. Cu o mână puternică şi cu furie revărsată",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.66,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1024,
+    "text": "UE, alarmată de pericolul unor ciocniri între forţele Turciei şi Rusiei în Siria...",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.66,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1030,
+    "text": "Nu-ți e milă? O înghite pe biata fată. Sună la autorități, lasă twitter-ul. 😁",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.33,
+      "angry": 0.33,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 1.0
+    }
+  },
+  {
+    "text_id": 1035,
+    "text": "Dureros pentru cei care suferă în tăcere. Condolianțe familiilor îndurerate!",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1044,
+    "text": "Tocmai a trebuit să prezint la științe și tremuram de emoții ca naiba. Încă tremur. Cum naiba mă opresc din tremurat?",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.66,
+      "angry": 0.33,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1046,
+    "text": "Fotbal: face istorie în Anglia",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 1.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1051,
+    "text": "urasc sqptamana de facut curat in casa",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.66,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1054,
+    "text": "Da se observă un pic mai rotunde decât Kalamata",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 1.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1070,
+    "text": "Asta da...!! Bunătate..!!",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.66
+    }
+  },
+  {
+    "text_id": 1092,
+    "text": "Decoratiuni uimitoare din crengi vechi, absolut deosebite-",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.33,
+      "happy": 0.66
+    }
+  },
+  {
+    "text_id": 1093,
+    "text": "și camarila sa a transformat Poliția în SPP-ul să vă mărturisesc că inclusiv pe grupurile de poliţişti a fost o mâhnire, a fost o frustrare şi a fost o revoltă din partea.",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 0.66,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.33,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1100,
+    "text": "Vodafone merge mai bine decat wifiu de la digi",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.33,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1101,
+    "text": "Alarmant! România trece de 3000 de cazuri COVID. La Brașov s-au înregistrat 80",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 0.66,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1111,
+    "text": "Din punctul meu de vedere strict, nu concep așa ceva sa se întâmple și riscam pușcăria mulți ani daca eram. Atât spun. Sunt revoltat, înfuriat maxim.",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 1.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1112,
+    "text": "💐 Condoleanțe familiei îndurerate! 💐 😢 😥 💐",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1115,
+    "text": "Mutare-surpriză a Guvernului Orban: Cum a fost blocat PSD să modifice hotărârea privind starea de alertă",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1120,
+    "text": "Japonia...surprinzător de surprinzătoare!",
+    "emotion": "surprise",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 1.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1121,
+    "text": "Teatru ieftin, pentru antenisti. Daca vor sa darame guvernul, o pot face in orice moment. Spunand ca actual guvern este incompetent, practic, PSD se autoacuza, pt ca astia guverneaza cu voia lor.",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.33,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1159,
+    "text": "Germania propune o rețea feroviară de mare viteză în Europa. România nu e pe lista scurtă",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 1.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1166,
+    "text": "Sunt deprimata! Singură, bătrână și falita în timpul pandemiei. Nici măcar nu pot pleca în vacanta",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1168,
+    "text": "Din toamnă, Bisericile de lemn din Maramureş vor putea fi vizitate virtual. O încântare accesibilă oricui.",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.33,
+      "happy": 0.66
+    }
+  },
+  {
+    "text_id": 1177,
+    "text": "Yach ce față are. Ma duc să mă uit la ceva cu noștri, altfel visez urat. Si asa mi a făcut niște nervi....",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.33,
+      "angry": 1.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1179,
+    "text": "Poliţist, agresat cu cuţitul la Paris",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1195,
+    "text": "Ce vor mănânca vedetele la banchetul organizat după Gala premiilor Oscar oscar vegetarianism vegetarian carne meat",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 1.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1198,
+    "text": "O moldoveancă din stânga Nistrului: Sunt foarte indignată de modul în care au fost întâlniți moldovenii din Transnistria, care mergeau spre urnele de votare (VIDEO)-",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 1.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1202,
+    "text": "Imagini de groază din Spitalul Reșița: pe holuri și mizerie de nedescris. Manager: În toate spitalele este la fel",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 0.66,
+      "surprise": 0.0,
+      "fear": 0.33,
+      "angry": 0.33,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1204,
+    "text": "stai stop pauza aia a fost... a fost,,, m-ai doborat cu aia 😭 😭",
+    "emotion": "surprise",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.66,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1209,
+    "text": "Wow pe treaba asta un influencer ar fi facut un filmulet si ar fi luat 2 miliarde de vizualizati plus banii aferenti din publicitate 😂😂",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.33,
+      "happy": 1.0
+    }
+  },
+  {
+    "text_id": 1221,
+    "text": "Ce imagini dezolante cu strazile din orasele italiene afectate! Au tras la Cizma,!",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1223,
+    "text": "Dacă sap prin mail-uri poate găsesc ceva cu un laptop MSI trimis la test mort pe bancul de probă. Mie personal mi-a murit placă video MSI scoasă din cutie. Loturi și loturi.",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.33,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1224,
+    "text": "poate murim și noi drecu și scăpăm de depresie",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.66,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1238,
+    "text": "Cauta produsele atat pentru femei cat si pentru barbati cu buline pe Sosetaria in acest weekend si le poti cumpara cu o reducere de 20%.",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 1.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1239,
+    "text": "O chilianca a uimit lumea! E femeia de fier. Ea a alergat, a inotat si a pedalat peste 50 de kilometri pe zi",
+    "emotion": "surprise",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 1.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.33,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1242,
+    "text": "este localizat in vecinatatea Bibliotecii Nationale a Romaniei",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 1.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1245,
+    "text": "Dute Dracului nataraule.....Religia nu are nimic deaface cu credinta.",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 1.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1248,
+    "text": "Cum faci spațiu liber pe Mac și scapi pentru totdeauna de „purgeable”",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 1.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1249,
+    "text": "pentru gândurile frumoase și florile superbe, care transmit optimism și culoare într-o mare de gri. 🙏",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 1.0
+    }
+  },
+  {
+    "text_id": 1250,
+    "text": "Avertisment teribil: SUA riscă un război civil! «Eu fac predicții științifice, nu profeții»",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 1.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.33,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1251,
+    "text": "Bai, muie, tu chiar nu-ti dai seama ce jeg esti, pisa-ne-am pe tine de infectie, jegule!",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 1.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1263,
+    "text": "AUR: Prelungirea stării de alertă să se facă DOAR cu vot în Parlament",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1279,
+    "text": "Un OZN incredibil surprins din întâmplare via",
+    "emotion": "surprise",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.66,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1281,
+    "text": "Ia-mi viața și pleacă cât mai departe... Eu îți plâng lipsa în fiecare noapte. Inima mea, te strigă în șoapte, Și-mi aștept propria moarte....",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1290,
+    "text": "Iertare! Uneori îmi permit să fiu exuberant de optimist.",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.66
+    }
+  },
+  {
+    "text_id": 1296,
+    "text": "De trei decenii o tot colapsați. Ș-au mai fost unii care au colapsat-o aproape un secol. Al naibii de greu să vă mai dea cineva crezare. Io unu' nu cred până nu văd.",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.33,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1298,
+    "text": "la care visez\" e mai totdeauna diferit de \"oentru care fac compromisul asta",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 1.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1299,
+    "text": "Graficul ăsta e înspăimântător. Dacă unii fac 10, 12, 15 mii de teste zilnic, noi.... E genocid, fraților RIPRomania",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 0.66,
+      "angry": 0.33,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1326,
+    "text": "a încheiat un contract cu Pentagonul pentru a construi sateliți de urmărire a rachetelor",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 1.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1331,
+    "text": "Cutremur de 7,4 pe Richter, în Mexic. Alertă de tsunami de-a lungul coastelor Mexicului, Hondurasului, Guatemalei și El Salvador",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.66,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1335,
+    "text": "Pe ei, normal. Vrei să dai crezare știrilor?? Mah, tu cînd lipsești de pe Twitter, că mai lipsești, nu răspunzi la apel tot timpul, te dai pe FB? Dezvolți apucături bizare!🤔😁",
+    "emotion": "surprise",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.66,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1345,
+    "text": "Băiat bătut și agresat sexual la Roznov, sub privirile ” civice ” ale unor care filmează neamt",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 0.66,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.33,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1359,
+    "text": ": Există două Românii. Una care se distrează și alta care este îngrijorată, iar parte din ea suferă în spitale",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1360,
+    "text": "A fost fantastică!",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.66
+    }
+  },
+  {
+    "text_id": 1361,
+    "text": "Nici n-am tresarit cand am primit asta...?",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.33,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1372,
+    "text": "Prima agenție turistică românească doborâtă de pandemie, își cere falimentul",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 0.66,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1375,
+    "text": "al Arabiei Saudite, despre atacul terorist din Viena: \" Aceasta crima odioasa este contrara tuturor religiilor",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 0.66,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.33,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1381,
+    "text": "Sictir! Nu poate fi toata lumea sobra ca tine!",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.66,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1382,
+    "text": "Amuzant, mi-am adus aminte numele gâscanului,, fratele meu îl numise așa, avea viteza 😃",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 1.0
+    }
+  },
+  {
+    "text_id": 1408,
+    "text": "da, super Insulă, și mie îmi place foarte mult!",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 1.0
+    }
+  },
+  {
+    "text_id": 1410,
+    "text": "Ati observat ca 2020 se poate scrie si ZOZO? 😎",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 1.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1420,
+    "text": "WoW,persoana aceasta există sau e un bot?rar îmi e dat sa rămân perplex",
+    "emotion": "surprise",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.66,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1422,
+    "text": "Dezastru! Județul Brașov a pierdut aproape 3000 de salariați. Suntem codași și la salarii, ne-a depășit și Mureșul",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.33,
+      "fear": 0.33,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1424,
+    "text": "Parlament/ Eveniment dedicat împlinirii a 65 de ani de prezenţă a României în UNESCO",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.33,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1425,
+    "text": "Frumusețea la om e ca floarea la pom... O duminica binecuvântată, de care sa va bucurați prieteni...",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 1.0
+    }
+  },
+  {
+    "text_id": 1431,
+    "text": "A donat 15 litri de lapte matern, după ce ei a murit. Povestea emoționantă a unei mame îndurerată",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1436,
+    "text": "TW!! Blood,, ig?!? . . După o ora de genetica sunt buimacita încât mi am uitat propria grupa de sânge",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.66,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1439,
+    "text": "China a furat și mințit prea mult fără să plătească. Acum e timpul să o facă chiar dacă pentru foarte multe țări e un stat intimidant de periculos din multe puncte de vedere.",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.33,
+      "angry": 0.66,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1441,
+    "text": "(în ebraică: סֶרג'יוּ נַטרָא, nume la naștere, n. 12 aprilie 1924, București, România – d. 23 februarie 2021) a fost un compozitor israelian de muzică cultă, evreu originar din România.",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.33,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1445,
+    "text": "Biet creștin, s-a convins că mulțumită globalizării, afară poate fi mai rău ca-n pușcărie...",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1446,
+    "text": "Incepem noul an cu o surpriza pentru clientii nostri: lansarea manualului de utilizare al platformei Extended, unde am publicat pentru inceput 35 de tutoriale si ghiduri 🥳",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1460,
+    "text": "Doliu la Ambulanța Satu Mare! El este asistentul medical ce a murit în accident!",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1466,
+    "text": "Corect. E uluitor câți agramați și semidocți își dau cu părerea pe orice subiect...",
+    "emotion": "surprise",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.66,
+      "fear": 0.0,
+      "angry": 0.33,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1470,
+    "text": "🄼🄰🄽🄶🄾 Este o sursa excelenta de vitamina C. Acesta contine, de asemenea, fibre solubile, care sunt foarte benefice pentru sanatate.",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.33,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1474,
+    "text": "VIDEO: Scandal la Lidl pe Mihai Viteazul – Un indignat că trebuie să păstreze distanța",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 1.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1480,
+    "text": "n-am nimic de spus decat VAI DE MINE CE CACAT CA PLANG",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1482,
+    "text": "Măsurile de prevenire a noilor infecții au și vor avea efecte mult mai dezastruoase decat infecțiile in sine. Absolut peste tot in lume. Efectele doar incep sa se vadă.",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 1.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.33,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1488,
+    "text": "Nu le convin protestele! Semn ca le e frica de adevar! Si-au echipat cateii de lupta si ii trimit in arena!",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.33,
+      "angry": 0.66,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1500,
+    "text": "De când te-am cunoscut, mi-am schimbat zodia. Acum sunt vărsător.. la cât plâng după tine.",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 0.66,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1507,
+    "text": "[ 👝 ] Daca ai ajuns pana aici asta inseamna ca esti o persoana minunata si ma susti 💞!Te iubesc mult!!! 💕 Sa ai o zi minunata! ☀ ️",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 1.0
+    }
+  },
+  {
+    "text_id": 1509,
+    "text": "În spatele vilei cu grădină, în spatele jachetei și cravatei, zâmbetul binevoitor, autoreferenția, suburbia.",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.33
+    }
+  },
+  {
+    "text_id": 1516,
+    "text": "Urăsc țara asta",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 1.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1518,
+    "text": "Sfaturile unui medic român din Verona: România să nu ajungă în situaţia Italiei că va fi dezastru-",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 1.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1527,
+    "text": "Ew sa nu vb despre asta ca oricum sunt depresiva",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 0.66,
+      "surprise": 0.0,
+      "fear": 0.33,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1528,
+    "text": "am făcut pentru prima dată mămăligă și mi-a ieșit super 👀 wife me up",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.33,
+      "happy": 0.66
+    }
+  },
+  {
+    "text_id": 1531,
+    "text": ": Tot bâlciul ăsta cu închisul magazinelor, închisu-n case, pleacă de fapt de la un vot dat în Parlament - Stiri pe surse - Cele mai noi stiri",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.33,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1540,
+    "text": "Autoritățile din Timiș propun ca Făgetul să intre în carantină, după ce numărul infectate cu Covid-19 a crescut alarmant-----;",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 0.66,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1545,
+    "text": "Declarațiile privind pacienții Covid-19 asimptomatici, care ar urma să intre în grija de familie, au produs un val de indignare în rândul acestora din urmă.",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.33,
+      "fear": 0.33,
+      "angry": 1.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1562,
+    "text": "Omul asta se lupta într-adevăr pentru pădurile României. Noi când o sa îl ajutam? Era sa fie o arat de hoții de lemne. Halal Românie.. 🤮",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.66,
+      "neutral": 0.33,
+      "trust": 0.33,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1563,
+    "text": "Psiho-dieta, dieta cu ajutorul minții, acum pe Digi. dacă ești interesat de ceva SF.",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.33,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1569,
+    "text": "cu bucurie, veniţi cu veselie înaintea Lui! Psalmul 100:2 VDC",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.66
+    }
+  },
+  {
+    "text_id": 1575,
+    "text": "Poli Iași câștigă jocul cu Hermannstadt și intră în play-out, la egalitate de puncte cu sibienii",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.33,
+      "happy": 0.33
+    }
+  },
+  {
+    "text_id": 1577,
+    "text": "Extremele meteorologice prognozate în România și USA (weather extremes)",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 1.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1579,
+    "text": "Ai vazut cu cat naduf declara aici pe Twt ca ei n-au votat nimic? Mare pacat ca avem vot secret.",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 0.66,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.33,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1585,
+    "text": "O tânără s-a dus la spital cu dureri menstruale, uluită să afle că naște în câteva minute",
+    "emotion": "surprise",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 1.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1589,
+    "text": "Coronavirusul, bilanț alarmant: Peste 1500 de morţi",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 0.66,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1591,
+    "text": "🥳 Bucuroasă că pot anunța încă din prima lună a anului începere unui nou proiect teatral documentar marca “ Jurnal de România ”. Să fie într-un ceas bun ❤ ️ la Teatrul Municipal Bacovia",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 1.0
+    }
+  },
+  {
+    "text_id": 1600,
+    "text": "facem facem!! am fost eu, ca i aproape aici de noi, e tare frumos, au si copacei!!",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.33
+    }
+  },
+  {
+    "text_id": 1601,
+    "text": "Nu ai înțeles absolut nimic din ce am spus. Asta nu tine de personalitate. Aceasta nefericire nu se poate controla, iar prin faptul ca o internalizeaza, creează mult mai mult rău.",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1606,
+    "text": "Vă propunem spre achiziție un apartament cu potențial, situat pe Revoluției, cu vedere spre bulevard, o locație de excepție atât pentru a locui, dar și pentru a vă desfășura activitatea.",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 1.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1607,
+    "text": "Au pus față-n față noua și vechea Dacia Sandero Stepway. Ce au observat?",
+    "emotion": "surprise",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.66,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1627,
+    "text": "Reacții dure, după ce opoziția a boicotat proiectele sociale: Afacerile criminale sunt posibile doar atunci când poporul este necăjit (VIDEO)",
+    "emotion": "surprise",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.66,
+      "fear": 0.33,
+      "angry": 0.33,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1632,
+    "text": "Credeam că doar eu am observat cămașa de fițe 🙃🙄",
+    "emotion": "surprise",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.66,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1637,
+    "text": "acest tiktok e o insulta directa la adresa mea",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 1.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1650,
+    "text": "Pieptul tău este foarte masiv, este cu adevărat uluitor.",
+    "emotion": "surprise",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.66,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1666,
+    "text": "Ești prietenul meu de nădejde pe veci!🙏🙏🙏😅",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.33,
+      "happy": 1.0
+    }
+  },
+  {
+    "text_id": 1702,
+    "text": "offf, am oroare de test, in. conditiile in care chiar am umblat ca stafiile, la 6 m distanta de lume, tot ca sa evitam zonele de contact 🤷 ‍ ♀ ️ ☹ ️",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 0.66,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1703,
+    "text": "Din nou fața aia de \" OMG \", super drăgălaș 😁 😂 ❤ ️",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.66
+    }
+  },
+  {
+    "text_id": 1730,
+    "text": "Ah, ok. Văzusem scris digi acolo.",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.33,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1739,
+    "text": "Desfătare a simțurilor...",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.66
+    }
+  },
+  {
+    "text_id": 1745,
+    "text": ": Agentia europeana specializata manifesta o '' mare ingrijorare '' fata de evolutia epidemiei in 7 state UE, inclusiv Romania",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 1.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.33,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1750,
+    "text": "o zi tristă în China: „ Nu vor fi flori anul acesta. Îi e frică să le cumpere, iar mie îmi e teamă să le ating ”",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1760,
+    "text": "Licoare domnească, mâncare aleasă şi cea mai neobişnuită locaţie - Land of Wine - te aşteaptă pe 29 Februarie 2020",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1774,
+    "text": "Ați observat că gay-ii se comporta precum femeile și lesbienele precum bărbații?",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1786,
+    "text": "i-a spus ca a invatat si ii mai zisese si \" bravo \". Am plans toata ora de nervi si mai era si ma panicam 🤡 ✌ 🏻",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.66,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1797,
+    "text": "Da... Adevărat, dar și sentimental in același timp, că să nu zic melancolic pentru unii...",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.33,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1800,
+    "text": "Comisiile pentru cultură au respins rapoartele de activitate ale Televiziunii publice pe 2017, 2018 şi 2019-",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1804,
+    "text": "Dute dracu de nenorocita",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.33,
+      "angry": 1.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1812,
+    "text": "Vietnam: Cel puţin 15 morţi şi zeci de răniţi după ce un autobuz s-a răsturnat într-o prăpastie-",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 0.66,
+      "surprise": 0.0,
+      "fear": 0.33,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1821,
+    "text": "VIDEO Momentul zguduitor in care un urs pasnic este impuscat la Predeal. Un martor a filmat scena care i-a revoltat pe localnici",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 0.66,
+      "angry": 0.33,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1826,
+    "text": "NBA-ul este la loc de cinste! „Vedeta” serii este duelul dintre Golden State Warriors și Los Angels Clippers!...",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.33
+    }
+  },
+  {
+    "text_id": 1829,
+    "text": "ai putea să adaugi în grafice și densitatea populației? există voci care spun că ar conta",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.33,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1830,
+    "text": "Hai sanatate!!! Sa fie cu bucurie!!! 🍻",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 1.0
+    }
+  },
+  {
+    "text_id": 1834,
+    "text": "Da, este chiar foarte trist. Totuși, Lidl este important.",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1844,
+    "text": "Viena era printre cele mai sigure capitale din Europa. Ultimul atentat terorist a avut loc în urmă cu 35 de ani, până ieri.",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.33,
+      "fear": 0.33,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1853,
+    "text": "Dacă și citesc țărămbeții, ar fi bine. Eu am damblaua asta de ani de zile. Mă iau de tâmpiții care-mi respiră în ceafă. Le dau temă să ia o lungime de braț față de mine.",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 1.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1854,
+    "text": "ah cand a afus o colega bete din alea de lumineaza in intjneric si le-am rupt si am inceput sa aruncam cu lichidul ala pe pereti si pe dupa ne-am speriat ca se vedea pe pereti si pe lumina=))",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.66,
+      "angry": 0.33,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1860,
+    "text": "Viata reala in Dubai ; Abu Dhabi! E mai ieftin decat in Romania! Vlog de... via",
+    "emotion": "surprise",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.66,
+      "fear": 0.33,
+      "angry": 0.33,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.33
+    }
+  },
+  {
+    "text_id": 1863,
+    "text": "Ca un câine turbat.. \" Da stiu. Asta e grav, fără discernământ! Prost informati, sau leneși sa încerce ceva pt o minimă informare",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 0.33,
+      "angry": 1.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1878,
+    "text": "Eu nu regret nimic. Stăteam ca un bou la coadă, făceam lecții la lampă, abia ne descurcam să luam ce ne trebuie. O perioadă de profundă dezumanizare. Sorry, devin ușor iritat când văd",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.66,
+      "neutral": 0.0,
+      "trust": 0.33,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1880,
+    "text": "Ceea ce părea de neimaginat a devenit, în era digitală, fapt divers consemnat ca atare: o statuie a lui a fost vandalizată şi doborâtă într-un american",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.33,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1886,
+    "text": "Planta minune care îți redă energia și te scapă de boli. Mulți români o au în casă!",
+    "emotion": "surprise",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.66,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.33,
+      "happy": 0.33
+    }
+  },
+  {
+    "text_id": 1887,
+    "text": "☑ | Rezumatul meciului de astazi din Cupa Romaniei Sursa: StadionulSteaua 🔜",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 1.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1888,
+    "text": "Plâng, mamă Pământ... Plâng, pentru că ne distruge... și cu noi, se va distruge și.. 😔",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1896,
+    "text": "comanda data duminica seara pe amazon, a venit joi. livrare standard. super multumit",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1900,
+    "text": "Tesla va proiecta o maşină electrică mică în China. Noul model ar fi al şaselea pe care îl scoate pe piaţă",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 1.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1903,
+    "text": "Pfoai cand am citit gradinita mi am amintit de prima mea zi la gradinita am plans dupa mama de mi au iesit ochii din orbita 🤣 🤣 🤣 🤣 🤣",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 0.66,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.33
+    }
+  },
+  {
+    "text_id": 1916,
+    "text": "Premierul României: After-school-urile au rămas deschise pentru că au respectat măsurile şi nu au existat cazuri de coronavirus",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.33,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1926,
+    "text": "mama știu ca ești dezamăgită de tunsoarea mea dar chiar nu poți sa fii mai puțin obvious?",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 0.66,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1932,
+    "text": "Sarmale de post cu ciuperci, reţeta care te va face să uiţi de varianta cu carne",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1945,
+    "text": "Lăsați cu sicriul în drum – Trupul neînsuflețit al unui din Agnita, reținut de teamă că a murit de coronavirus",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1964,
+    "text": "A pus bicarbonat în lapte fierbinte și apoi a băut. E uluitor ce s-a întâmplat în organism, a doua zi-",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1968,
+    "text": "S-a aflat acum ce se întâmplă cu Dacia: vestea surpriză vine fix înainte de lansarea noului Sandero",
+    "emotion": "surprise",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.66,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1971,
+    "text": "Fiecare zi este un dar, de sarbatorit cu bucurie si iubire! Un decembrie cu darurile cele mai frumoase va doresc 🙏 ♥ ️ 🤗 😘",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.33,
+      "happy": 1.0
+    }
+  },
+  {
+    "text_id": 1976,
+    "text": "Imagini ca în filmele de groază, invazie de lăcuste filmată în Africa, s-a declarat stare de urgenţă (video)",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 1.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1981,
+    "text": "Se mizeaza pe faptul sa fim imunizati (infectati) toti, multi vor fi asimptomatici, restul, scapa cine poate! Un sfat:Aveti grija de ficatul vostru!",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 0.66,
+      "surprise": 0.0,
+      "fear": 0.33,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.33,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1985,
+    "text": "La noi n-aș crede!",
+    "emotion": "surprise",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.66,
+      "fear": 0.0,
+      "angry": 0.33,
+      "neutral": 0.0,
+      "trust": 0.33,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1987,
+    "text": "Îngrijorare maximă în rândul specialiștilor! O țară alungă coronavirusul cu fum",
+    "emotion": "surprise",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.66,
+      "fear": 0.33,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1988,
+    "text": "Să crape odată moroiul nenorocit!",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 1.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 1999,
+    "text": "simt durerea în suflet și lacrima în ochi",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2005,
+    "text": "azi am fost super confident și m-am distrat cu fetele. îmi trebuia o ieșeala de genul.",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.33,
+      "happy": 0.66
+    }
+  },
+  {
+    "text_id": 2006,
+    "text": "imi e frica nu cred ca stiu suficiente cuvinte",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 0.66,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2011,
+    "text": "liga1 etapa24 fcsbclinceni Aceasta este echipa trimisă în teren de la partida cu Academica Clinceni, care va începe la 20:00, în direct la Digi Sport, ; LookSport.",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 1.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2014,
+    "text": "Fost fotbalist român, ucis de coronavirus! „Transmitem familiei îndoliate sincere condoleanțe”...",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 0.66,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2016,
+    "text": "Curiozitatea feminină i-a fost satisfăcută! 🤣 🤣",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.66
+    }
+  },
+  {
+    "text_id": 2024,
+    "text": "Vedem concluzia la alegerile locale. Mi-e teamă că ai dreptate.",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.33,
+      "fear": 1.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2032,
+    "text": "Săracu frustrat, de multe a fost refuzat în viața lui. Iar prin aceste declarații deschide ușa bărbaților. Oare va fi refuzat și de...",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2033,
+    "text": "nu ma mai refuza atat si joaca te dracului cu mine pubg",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.66,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2035,
+    "text": "Să n-ai niciodată încredere într-un șarpe - Ep. 4 | LEGO Ninjago | Episoade complete",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.33,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2043,
+    "text": "aproape niciun un profesor nu crede in mine",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2045,
+    "text": "Probabil. Nu știu exact cum e în fotbal, am auzit de șpăgi la să-ți bage plodul în echipă. Fie-mea face (alt) sport de performanță și știu ce jale este în ramură ei sportivă.",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.33,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2051,
+    "text": "Un trotuar rulant din Gara de Nord care a costat 11 milioane de lei a ajuns în ruină. Imaginile dezolante care îi întâmpină pe",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2067,
+    "text": "Ntz, ntz. Daca nu cheltuiesti la \" noi \" si vrei \" value4money \" nu esti patriot. Ntz, ntz.!",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2074,
+    "text": "🤗 iti doresc o zi perfecta!",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.33,
+      "happy": 0.66
+    }
+  },
+  {
+    "text_id": 2075,
+    "text": "Fotbal: - Riscul excluderii României din circuitul EURO 2020 a fost eliminat-",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.33,
+      "happy": 0.33
+    }
+  },
+  {
+    "text_id": 2084,
+    "text": "luat prin surprindere de fetița lui: \" Am plâns în pumni!... via",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 0.66,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2089,
+    "text": "anul asta am stat 6 saptamani in praf de Baragan, la cativa km de o fosta colonie de deportati. din dragoste.",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2098,
+    "text": "Zi frumoasă îți doresc, ☕ ️ 🍂 🍁",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.33,
+      "happy": 1.0
+    }
+  },
+  {
+    "text_id": 2099,
+    "text": "România pentru totdeauna.",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.33,
+      "happy": 0.33
+    }
+  },
+  {
+    "text_id": 2105,
+    "text": "Ce te f*te pe tine grija? Te-a înjurat pe tine de morți fără motiv???",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.66,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2113,
+    "text": "Acest moment merită o sărbătoare. La revedere pentru totdeauna!",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.66
+    }
+  },
+  {
+    "text_id": 2122,
+    "text": "despre sedinta de Guvern: \" Nu suporta amanare \". Ar urma sa participe si ministrii USR PLUS",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.33,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2125,
+    "text": "ALDE, mâhnit de decizia Guvernului privind restaurantele: ' Haosul din guvernarea ne duce într-o situație de-a dreptul halucinantă '",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2129,
+    "text": "Fotografii rare cu femei care au încălcat legea în anii 1920 în Australia foto",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2132,
+    "text": "Pentru mine e un chin 😞",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2144,
+    "text": "Condoleanțe familiilor îndurerate și rugăciune pentru cei care încă se luptă pentru viață …",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.33,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2146,
+    "text": "Îs mirată. Acum mai rămâne săi recunosc și dacă își vopsesc părul",
+    "emotion": "surprise",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 1.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2154,
+    "text": "În ce condiții ar putea intra municipiul Alba Iulia în SCENARIUL ROȘU: Rata de incidență, la nivel alarmant",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 1.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2155,
+    "text": "26 Dar DOMNUL s-a mâniat pe mine din cauza voastră şi nu m-a ascultat. El mi-a răspuns: «Destul! Nu-Mi mai vorbi despre lucrul acesta.",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.33,
+      "angry": 0.66,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2170,
+    "text": "S-au pupat! Nu ma mai uit la stiri. Done with this shit. M-am umplut de nervi azi.",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 1.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2174,
+    "text": "Şapte morţi în incendiul de la Institutul Matei Balş. Un alt a murit la două zile după tragedie",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.33,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2187,
+    "text": "Ba și înjurat. Vezi-ți de ale tale, lasă-mă in ciorba mea și gata.",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 1.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2190,
+    "text": "Ai grijă!!! Mâine vei fi transformat în ceea ce ești acum de către vrăjitoare!!!!!",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.66,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2197,
+    "text": "Din nefericire și eu cunosc câțiva așa ☹ ️",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 0.66,
+      "surprise": 0.33,
+      "fear": 0.33,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2200,
+    "text": "ce dumnezeului se mai întâmplă acum? eu is up to date cu ce se întâmplă în alte țări, dar just că de Romania nu știu absolut nimic și la momentul de față, nimic nu mă mai surprinde 🤦🏼‍♀️",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2206,
+    "text": "Părți din orașul Minneapolis arată ca după război în urma protestelor violente și a ciocnirilor care au izbucnit după moartea unui afro-american în timp ce era arestat.",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.33,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2220,
+    "text": "Halucinant! Cum se umflă numărul morților de Covid",
+    "emotion": "surprise",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.66,
+      "fear": 0.0,
+      "angry": 0.33,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2227,
+    "text": "Imaginile care-ți dau fiori! A fost transmis mesaj de avertizare prin RoAlert VIDEO + FOTO",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 1.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2248,
+    "text": "VIDEO - Doi pescuiesc ilegal de câteva zile la lacurile Șopa | Ora de Sibiu",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.33,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2252,
+    "text": "stă în zâmbet. Copilul din mine mă urmărește la orice pas. Chiar și cu barba de azi... tot am rămas. Te iubesc. Da, pe tine... ❤ ❤ ❤",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 1.0
+    }
+  },
+  {
+    "text_id": 2262,
+    "text": "Conflict major între Londra şi Paris. Părţile „se vor căsăpi”, avertizează şeful diplomaţiei franceze",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.66,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2270,
+    "text": "Și pe voi vă enervează când la Kaufland/Lidl/Auchan/Carrefour și nimeriți un coș plin de gunoaie? Pe mine, sincer, mă apucă toate pandaliile..... 🙄",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 1.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2277,
+    "text": "O zi perfectă îți doresc!",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.66
+    }
+  },
+  {
+    "text_id": 2287,
+    "text": "Oribil. Ca în vremurile pe care le credeam apuse: sună la Securitate să-ți dai în gât vecinul, colega de muncă...",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.33,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2292,
+    "text": "Qatarul face investii uriase in sport si se pregateste pentru gazduirea Cupei Mondiale de fotbal.",
+    "emotion": "neutral",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.66,
+      "trust": 0.33,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2297,
+    "text": "VAI ȘI AMAR",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2309,
+    "text": "Se bucură si la 10 bani!",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.66
+    }
+  },
+  {
+    "text_id": 2310,
+    "text": "imi vine sa l injur pe jegosul de cheloo de toti mortii si parintii",
+    "emotion": "angry",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 1.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2314,
+    "text": "Cinema City, cel mai mare operator de cinema din România, închide din nou cinematografele, abia redeschise. \" Este incredibil de trist să vedem cinematografele noastre fără și cu ecranele oprite.",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 0.66,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2363,
+    "text": "Țin minte, când am stat în Iași, i-am zis unui tip că nu-i ok să scuipe pe stradă. Era cât pe ce să-mi iau una. Atât de mult m-a frustrat gestul lui încât nu pot să uit toată întâmplarea.",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 1.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.33,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2370,
+    "text": "Am fost invitată acum câțiva ani, când eram în California, la un BBQ vegetarian în grădina unei familii de americani.",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.66
+    }
+  },
+  {
+    "text_id": 2376,
+    "text": "Un de 15 ani din Mongolia a murit de ciumă bubonică. Îngrijorare în China şi Rusia.",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.33,
+      "surprise": 0.0,
+      "fear": 0.66,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2378,
+    "text": "O femeie în vârstă din Canada a fost eutanasiată ca să evite angoasa singurătății unui nou. - De Interes - Gânduri Ortodoxe",
+    "emotion": "sad",
+    "procentual_labels": {
+      "sad": 0.66,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2399,
+    "text": "Doarme fi-miu pe Black Sabbath de n-are nicio tresărire. Soră-sa rupea somnul pe Nirvana la aceeași vârstă. Ceva tot am făcut bine în viața asta.",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.33,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.33,
+      "happy": 0.66
+    }
+  },
+  {
+    "text_id": 2457,
+    "text": "An Nou Fericit cu sănătate și prosperitate tuturor! A Prosperous and a Happy New Year to All!",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.66
+    }
+  },
+  {
+    "text_id": 2497,
+    "text": "Ce spune redactorul șef demis de la site-ul maghiar Index: Campania împotriva mea e ridicolă şi înspăimântătoare",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.66,
+      "angry": 0.33,
+      "neutral": 0.0,
+      "trust": 0.0,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2536,
+    "text": "Fobie de scris. Am atâtea idei faine pe care mi le notez în carnețel și nu le mai dezvolt doar din cauză că mi-i frică de rezultat.",
+    "emotion": "fear",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.66,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.33,
+      "happy": 0.0
+    }
+  },
+  {
+    "text_id": 2575,
+    "text": "♤ Numără-ți faptele bune în fiecare dimineață și umple-ți mintea cu gânduri pozitive. Acesta este secretul pentru a fi fericit și inspirat pe tot parcursul zilei... Primrose Hill Viewpoint",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.33,
+      "happy": 1.0
+    }
+  },
+  {
+    "text_id": 2637,
+    "text": "Anul Nou să vă aducă sănătate, fericire, pace în suflet și prosperitate! La mulți ani! 🥳🍾🥂🎆",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.33,
+      "happy": 1.0
+    }
+  },
+  {
+    "text_id": 2672,
+    "text": "Grădinița de copii Plină e de jucării Păpușele, ursuleți Călușei și tot ce vreți. Dimineața-n de zi Vezi mulțimea de Venind vesel, mulțumiți Pentru joacă pregătiți.",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.0,
+      "trust": 0.33,
+      "happy": 1.0
+    }
+  },
+  {
+    "text_id": 2703,
+    "text": "Fotografiile în faună și sălbăticie, mereu o încântare pentru ochii privitorului. a realizat aceste fotografii în deșertul Kalahari:",
+    "emotion": "happy",
+    "procentual_labels": {
+      "sad": 0.0,
+      "surprise": 0.0,
+      "fear": 0.0,
+      "angry": 0.0,
+      "neutral": 0.33,
+      "trust": 0.0,
+      "happy": 0.66
+    }
+  }
+]

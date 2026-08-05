@@ -1,0 +1,17 @@
+# Leading discourse markers used by context.py to modulate how much a
+# sentence's context-adjusted emotion prediction is pulled toward the
+# previous sentence (preprocess/objectives.md Phase 11: "Detect discourse
+# markers such as contrast or consequence"). Checked against the *first*
+# content token of a sentence only (a leading "dar"/"deci" signals a
+# deliberate discourse move; the same word mid-sentence is much weaker
+# evidence and isn't checked here).
+contrast:
+  - dar
+  - însă
+  - totuși
+  - ci
+consequence:
+  - deci
+  - așadar
+  - prin urmare
+  - astfel

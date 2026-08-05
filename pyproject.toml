@@ -1,0 +1,67 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "expressive-tts"
+version = "0.1.0"
+description = "Romanian expressive TTS text preprocessing frontend"
+readme = "readme.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.6",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]
+linguistic = [
+    # Linguistic stack (tokenize/POS/morphology/lemma/dependency parsing) —
+    # see preprocess/objectives.md Phase 3. Two interchangeable backends:
+    #   * Trankit (preferred): transformer, XLM-RoBERTa via HuggingFace
+    #     `transformers`. NOTE: trankit 1.1.1 crashes on import under Python
+    #     3.11+, so on a modern interpreter the layer falls back to Stanza.
+    #   * Stanza (fallback): Stanford's neural pipeline, works on Python 3.13.
+    # Both are free and local; both emit the same full stack. Download the
+    # matching model via scripts/download_{trankit,stanza}_model.py.
+    "trankit>=1.1; python_version < '3.11'",
+    "stanza>=1.14",
+    # only needed by scripts/fetch_emotion_lexicon.py, to read the NRC
+    # EmoLex .xlsx translation file; consumed by focus.py's emotion-bearing
+    # word lookup (Phase 8), no longer by emotion.py.
+    "openpyxl>=3.1",
+]
+ai = [
+    # Transformer emotion classifier (Phase 6/7): a multilingual
+    # XLM-RoBERTa emotion model run locally through HuggingFace
+    # `transformers`. Replaces the rule-based lexicon baseline as the
+    # pipeline's emotion source. `torch` is pulled transitively by both
+    # `transformers` and `trankit`; pinned here so the emotion layer can be
+    # installed without the full `linguistic` extra.
+    "transformers>=4.36",
+    "torch>=2.1",
+]
+ml = [
+    # preprocess/objectives.md Phase 7 —
+    # objective_evaluation.train_emotion_classifier and
+    # objective_evaluation.evaluate_emotion_classifier only. Not a runtime
+    # dependency of the pipeline itself.
+    "scikit-learn>=1.4",
+]
+training = [
+    # VITS acoustic-model training (src/tts_training). Coqui TTS (the
+    # maintained `coqui-tts` fork) + its trainer. Intended for a CUDA GPU
+    # box, NOT Apple M1 — data-prep (tts_training.data.manifest) needs none
+    # of this and runs locally. `coqui-tts` may not install on Python 3.13;
+    # install this extra in the training environment's interpreter.
+    "coqui-tts>=0.24",
+]
+
+[project.scripts]
+tts-preprocess = "expressive_tts.preprocess.cli:main"
+tts-build-manifest = "tts_training.data.manifest:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

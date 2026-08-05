@@ -1,0 +1,12 @@
+# Project-specific pronunciation corrections, keyed by lowercased word.
+# Checked before espeak. Value is the IPA phoneme string to use verbatim
+# (same notation espeak produces, so downstream stress/syllable logic
+# still works on it).
+#
+# Verified against real espeak output, not guessed: `TVA` (the Romanian
+# VAT acronym, appears in datasets/hria/catalina/metadata_simple.txt —
+# "Produsul costă 149 de lei și include TVA 19%.") is read by espeak as
+# one made-up word ("tvˈa") instead of spelled out letter-by-letter
+# ("te-ve-a", how it's actually said). Override with the letter-name
+# pronunciation.
+tva: "tˈe vˈe ˈa"
