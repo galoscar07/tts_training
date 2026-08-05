@@ -64,7 +64,7 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--overfit_batch", type=_bool_arg, default=False)
     parser.add_argument("--skip_train_epoch", type=_bool_arg, default=False)
     parser.add_argument("--start_with_eval", type=_bool_arg, default=False)
-    parser.add_argument("--small_run", type=int, default=None)
+    parser.add_argument("--small-run", "--small_run", dest="small_run", type=int, default=None)
     parser.add_argument("--gpu", type=int, default=None)
     parser.add_argument("--rank", type=int, default=0)
     parser.add_argument("--group_id", type=str, default="")

@@ -5,7 +5,7 @@ set -euo pipefail
 
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 PYTHON="${VITS_PYTHON:-$REPO_ROOT/.venv/bin/python}"
-RUN_ROOT="${VITS_RUN_ROOT:-$HOME/tts_runs}"
+RUN_ROOT="${VITS_RUN_ROOT:-$REPO_ROOT/out/training_runs}"
 CONTROL_DIR="$RUN_ROOT/control"
 PID_FILE="$CONTROL_DIR/vits.pid"
 CURRENT_LOG_FILE="$CONTROL_DIR/current-log"
@@ -95,7 +95,9 @@ run_training() {
     local -a mode_args=()
 
     if [ "$mode" = "smoke" ]; then
-        mode_args=(--small_run 256)
+        # Hyphenated spelling is intentionally unknown to trainer.distribute,
+        # so it is forwarded to the target script instead of being consumed.
+        mode_args=(--small-run 256)
         output="$RUN_ROOT/vits_ro_smoke"
         log_dir="$output/logs"
         train_log="$log_dir/training-${timestamp}.log"
