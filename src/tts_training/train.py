@@ -17,6 +17,7 @@ share one multi-speaker model.
 from __future__ import annotations
 
 import argparse
+import os
 from pathlib import Path
 
 
@@ -85,12 +86,28 @@ def main(argv: list[str] | None = None) -> None:
     # --- Coqui imports (GPU box only) -------------------------------------
     from trainer import Trainer, TrainerArgs
     from TTS.tts.datasets import load_tts_samples
+    from TTS.tts.datasets import dataset as tts_dataset
     from TTS.tts.models.vits import Vits
     from TTS.tts.utils.speakers import SpeakerManager
     from TTS.utils.audio import AudioProcessor
 
     from tts_training.data.formatter import coqui_formatter
     from tts_training.vits.config import base_vits_config
+
+    # Coqui 0.27.5 probes every WAV with torchaudio/FFmpeg while sorting the
+    # dataset by length. Under DDP that means four full 57k-file scans and
+    # hundreds of thousands of FFmpeg decoder initializations before step 0.
+    # Our manifests point to PCM WAV speech; an approximate frame count from
+    # file size is sufficient here because this value is used only for
+    # filtering/sorting. Audio is still decoded normally when a batch loads.
+    def _fast_audio_size(audio_path: str) -> int:
+        return max(1, (os.path.getsize(audio_path) - 44) // 2)
+
+    tts_dataset.get_audio_size = _fast_audio_size
+    print(
+        f"[rank {args.rank}] fast WAV length scan enabled (filesystem metadata)",
+        flush=True,
+    )
 
     # One config; attach every corpus as a dataset entry.
     from TTS.tts.configs.shared_configs import BaseDatasetConfig
