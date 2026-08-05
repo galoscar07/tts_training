@@ -29,6 +29,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 from expressive_tts.preprocess.pipeline import PreprocessPipeline
+from expressive_tts.preprocess.phonemizer import phonetics_only
 from tts_training import paths
 from tts_training.data.readers import (
     DatasetReader,
@@ -69,6 +70,7 @@ def build_manifest(
     with_emotion: bool = False,
     pipeline: PreprocessPipeline | None = None,
     progress_every: int = 100,
+    phonetics_only_mode: bool = False,
 ) -> BuildStats:
     if dataset not in DATASETS:
         raise ValueError(f"unknown dataset {dataset!r}; known: {sorted(DATASETS)}")
@@ -81,7 +83,13 @@ def build_manifest(
 
     reader = DATASETS[dataset]
     pipeline = pipeline or PreprocessPipeline()
-    include = {"phonemes", "emotion"} if with_emotion else {"phonemes"}
+    if phonetics_only_mode and with_emotion:
+        raise ValueError("--phonetics-only cannot be combined with --with-emotion")
+    include = (
+        {"normalized"}
+        if phonetics_only_mode
+        else ({"phonemes", "emotion"} if with_emotion else {"phonemes"})
+    )
     valid_symbols = symbol_set()
 
     out_path = Path(out_path)
@@ -103,7 +111,11 @@ def build_manifest(
                 continue
 
             result = pipeline.process(utt.text, include=include)
-            phonemes = (result.phoneme_text or "").strip()
+            phonemes = (
+                phonetics_only(result.normalized_text or result.clean_text or utt.text)
+                if phonetics_only_mode
+                else (result.phoneme_text or "").strip()
+            )
             if not phonemes:
                 stats.skipped_empty_phonemes += 1
                 continue
@@ -151,6 +163,13 @@ def main(argv: list[str] | None = None) -> None:
         help="report progress every N written rows (0 disables; default: 100)",
     )
     parser.add_argument(
+        "--phonetics-only", action="store_true",
+        help=(
+            "skip Stanza and generate stressed Romanian IPA directly with eSpeak; "
+            "intended for neutral base-model manifests"
+        ),
+    )
+    parser.add_argument(
         "--with-emotion", action="store_true",
         help="add per-utterance emotion label (loads the transformer; for the deferred fine-tune)",
     )
@@ -164,6 +183,7 @@ def main(argv: list[str] | None = None) -> None:
         limit=args.limit,
         with_emotion=args.with_emotion,
         progress_every=args.progress_every,
+        phonetics_only_mode=args.phonetics_only,
     )
 
     print(f"manifest: {args.out}")

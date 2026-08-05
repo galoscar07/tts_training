@@ -48,6 +48,9 @@ scratch is a multi-day job and is not expected to train on Apple M1.
 # neutral base manifest (fast — phonemes only, no emotion model)
 python -m tts_training.data.manifest --dataset mara --out out/mara.manifest
 
+# fastest neutral path: normalization + stressed eSpeak IPA, no Stanza syntax
+python -m tts_training.data.manifest --dataset mara --out out/mara.manifest --phonetics-only
+
 # external corpora
 python -m tts_training.data.manifest --dataset swara --corpus-root /data/SWARA --out out/swara.manifest
 python -m tts_training.data.manifest --dataset common_voice --corpus-root /data/cv-ro --out out/cv.manifest

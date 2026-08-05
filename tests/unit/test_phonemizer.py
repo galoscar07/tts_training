@@ -5,6 +5,7 @@ from expressive_tts.preprocess.phonemizer import (
     default_overrides,
     espeak_available,
     espeak_ipa_for_words,
+    phonetics_only,
     phoneme_inventory,
     unknown_phonemes,
 )
@@ -42,6 +43,22 @@ def test_espeak_ipa_for_words_alignment():
 
 def test_espeak_ipa_for_words_empty_input():
     assert espeak_ipa_for_words([]) == []
+
+
+@requires_espeak
+def test_phonetics_only_preserves_punctuation_and_stress():
+    result = phonetics_only("Bună ziua!")
+    assert result.endswith(" !")
+    assert "ˈ" in result
+
+
+def test_phonetics_only_applies_pronunciation_overrides(monkeypatch):
+    import expressive_tts.preprocess.phonemizer as phonemizer_module
+
+    monkeypatch.setattr(
+        phonemizer_module, "espeak_ipa_for_words", lambda words: ["fallback"] * len(words)
+    )
+    assert phonetics_only("TVA.", {"tva": "tˈe vˈe ˈa"}) == "tˈe vˈe ˈa ."
 
 
 def _make_document_with_tokens(word_tokens: list[Token]) -> PipelineDocument:

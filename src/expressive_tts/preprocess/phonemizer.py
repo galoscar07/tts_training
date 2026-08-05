@@ -12,6 +12,7 @@ eSpeak) is not integrated: licensing/distribution is unclear;
 
 from __future__ import annotations
 
+import re
 import shutil
 import subprocess
 from functools import lru_cache
@@ -26,6 +27,7 @@ PRODUCER = "phonemizer_espeak_v1"
 ESPEAK_BINARY = "espeak"
 
 _CONFIG_DIR = Path(__file__).resolve().parents[3] / "configs" / "preprocess"
+_FAST_TOKEN_RE = re.compile(r"\w+(?:[-’']\w+)*|[^\w\s]", re.UNICODE)
 
 
 @lru_cache(maxsize=None)
@@ -123,6 +125,24 @@ def espeak_ipa_for_words(words: list[str]) -> list[str]:
     if len(lines) == len(words):
         return lines
     return [_espeak_single(word) for word in words]
+
+
+def phonetics_only(text: str, overrides: dict[str, str] | None = None) -> str:
+    """Convert normalized text directly to stressed IPA without Stanza.
+
+    Word/punctuation splitting is deliberately lexical rather than
+    linguistic: eSpeak supplies Romanian phonemes and its ``ˈ``/``ˌ`` stress
+    marks, while punctuation is retained for the TTS sequence.
+    """
+    tokens = _FAST_TOKEN_RE.findall(text)
+    word_positions = [i for i, token in enumerate(tokens) if token[0].isalnum()]
+    words = [tokens[i] for i in word_positions]
+    pronunciations = espeak_ipa_for_words(words)
+    configured_overrides = overrides if overrides is not None else default_overrides()
+
+    for position, word, pronunciation in zip(word_positions, words, pronunciations):
+        tokens[position] = configured_overrides.get(word.lower(), pronunciation or word.lower())
+    return " ".join(tokens)
 
 
 class PhonemizerProcessor:
