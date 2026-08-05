@@ -20,6 +20,15 @@ import argparse
 from pathlib import Path
 
 
+def _bool_arg(value: str) -> bool:
+    value = value.lower()
+    if value in {"1", "true", "yes", "y"}:
+        return True
+    if value in {"0", "false", "no", "n"}:
+        return False
+    raise argparse.ArgumentTypeError(f"expected true/false, got {value!r}")
+
+
 def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
@@ -32,8 +41,33 @@ def main(argv: list[str] | None = None) -> None:
     )
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--run-name", default="vits_ro_base")
-    parser.add_argument("--batch-size", type=int, default=16)
-    parser.add_argument("--restore-path", type=Path, default=None, help="checkpoint to resume/continue from")
+    parser.add_argument("--batch-size", type=int, default=8, help="per-GPU batch size")
+    parser.add_argument("--eval-batch-size", type=int, default=8, help="per-GPU evaluation batch size")
+    parser.add_argument("--num-loader-workers", type=int, default=4, help="workers per GPU")
+    parser.add_argument("--num-eval-loader-workers", type=int, default=2, help="evaluation workers per GPU")
+    parser.add_argument("--epochs", type=int, default=1000)
+    parser.add_argument("--print-step", type=int, default=25)
+    parser.add_argument("--save-step", type=int, default=5000)
+    parser.add_argument("--save-n-checkpoints", type=int, default=5)
+
+    # trainer.distribute appends these arguments to every worker process.
+    # Keep underscore spellings because that is the TrainerArgs CLI contract.
+    parser.add_argument("--continue_path", type=str, default=None)
+    parser.add_argument(
+        "--restore-path", "--restore_path", dest="restore_path", type=str, default=None,
+        help="checkpoint whose weights initialize a new run",
+    )
+    parser.add_argument("--best_path", type=str, default=None)
+    parser.add_argument("--use_ddp", type=_bool_arg, default=False)
+    parser.add_argument("--use_accelerate", type=_bool_arg, default=False)
+    parser.add_argument("--grad_accum_steps", type=int, default=1)
+    parser.add_argument("--overfit_batch", type=_bool_arg, default=False)
+    parser.add_argument("--skip_train_epoch", type=_bool_arg, default=False)
+    parser.add_argument("--start_with_eval", type=_bool_arg, default=False)
+    parser.add_argument("--small_run", type=int, default=None)
+    parser.add_argument("--gpu", type=int, default=None)
+    parser.add_argument("--rank", type=int, default=0)
+    parser.add_argument("--group_id", type=str, default="")
     args = parser.parse_args(argv)
 
     if len(args.manifest) != len(args.corpus_root):
@@ -55,7 +89,15 @@ def main(argv: list[str] | None = None) -> None:
 
     config = base_vits_config(
         args.manifest[0], args.corpus_root[0], args.output,
-        run_name=args.run_name, batch_size=args.batch_size,
+        run_name=args.run_name,
+        batch_size=args.batch_size,
+        eval_batch_size=args.eval_batch_size,
+        num_loader_workers=args.num_loader_workers,
+        num_eval_loader_workers=args.num_eval_loader_workers,
+        epochs=args.epochs,
+        print_step=args.print_step,
+        save_step=args.save_step,
+        save_n_checkpoints=args.save_n_checkpoints,
     )
     config.datasets = [
         BaseDatasetConfig(
@@ -79,7 +121,21 @@ def main(argv: list[str] | None = None) -> None:
     model = Vits(config, ap, tokenizer, speaker_manager=speaker_manager)
 
     trainer = Trainer(
-        TrainerArgs(restore_path=str(args.restore_path) if args.restore_path else None),
+        TrainerArgs(
+            continue_path=args.continue_path,
+            restore_path=args.restore_path,
+            best_path=args.best_path,
+            use_ddp=args.use_ddp,
+            use_accelerate=args.use_accelerate,
+            grad_accum_steps=args.grad_accum_steps,
+            overfit_batch=args.overfit_batch,
+            skip_train_epoch=args.skip_train_epoch,
+            start_with_eval=args.start_with_eval,
+            small_run=args.small_run,
+            gpu=args.gpu,
+            rank=args.rank,
+            group_id=args.group_id,
+        ),
         config,
         str(args.output),
         model=model,
