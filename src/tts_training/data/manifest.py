@@ -23,6 +23,8 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import sys
+import time
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -66,6 +68,7 @@ def build_manifest(
     limit: int | None = None,
     with_emotion: bool = False,
     pipeline: PreprocessPipeline | None = None,
+    progress_every: int = 100,
 ) -> BuildStats:
     if dataset not in DATASETS:
         raise ValueError(f"unknown dataset {dataset!r}; known: {sorted(DATASETS)}")
@@ -84,9 +87,12 @@ def build_manifest(
     out_path = Path(out_path)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     stats = BuildStats()
+    seen = 0
+    started = time.monotonic()
 
     with out_path.open("w", encoding="utf-8") as out:
         for utt in reader(root):
+            seen += 1
             if limit is not None and stats.written >= limit:
                 break
             if not utt.text:
@@ -106,6 +112,16 @@ def build_manifest(
             emotion = _first_emotion(result) if with_emotion else ""
             out.write(f"{utt.rel_wav}|{phonemes}|{utt.speaker}|{emotion}\n")
             stats.written += 1
+            if progress_every > 0 and (
+                stats.written == 1 or stats.written % progress_every == 0
+            ):
+                elapsed = time.monotonic() - started
+                print(
+                    f"manifest progress: {stats.written} written / {seen} scanned "
+                    f"({elapsed:.1f}s)",
+                    file=sys.stderr,
+                    flush=True,
+                )
 
     return stats
 
@@ -131,6 +147,10 @@ def main(argv: list[str] | None = None) -> None:
     )
     parser.add_argument("--limit", type=int, default=None, help="cap rows (M1 smoke test)")
     parser.add_argument(
+        "--progress-every", type=int, default=100,
+        help="report progress every N written rows (0 disables; default: 100)",
+    )
+    parser.add_argument(
         "--with-emotion", action="store_true",
         help="add per-utterance emotion label (loads the transformer; for the deferred fine-tune)",
     )
@@ -143,6 +163,7 @@ def main(argv: list[str] | None = None) -> None:
         datasets_dir=args.datasets_dir,
         limit=args.limit,
         with_emotion=args.with_emotion,
+        progress_every=args.progress_every,
     )
 
     print(f"manifest: {args.out}")

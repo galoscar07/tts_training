@@ -31,6 +31,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import sys
 from pathlib import Path
 
 from expressive_tts.preprocess.registry import PipelineDocument
@@ -76,10 +77,20 @@ def _init_backend():
     try:
         import stanza
 
+        print(
+            "linguistic backend: loading Stanza Romanian model (local files, CPU) ...",
+            file=sys.stderr,
+            flush=True,
+        )
         _pipeline_instance = stanza.Pipeline(
-            "ro", processors="tokenize,pos,lemma,depparse", verbose=False
+            "ro",
+            processors="tokenize,pos,lemma,depparse",
+            download_method=None,
+            use_gpu=False,
+            verbose=False,
         )
         _backend = "stanza"
+        print("linguistic backend: Stanza ready", file=sys.stderr, flush=True)
         return
     except Exception as exc:
         errors.append(f"stanza unavailable: {exc}")

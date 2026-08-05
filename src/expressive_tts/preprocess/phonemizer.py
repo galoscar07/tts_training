@@ -102,10 +102,23 @@ def espeak_ipa_for_words(words: list[str]) -> list[str]:
             capture_output=True,
             text=True,
             timeout=15,
+            check=True,
         )
-        lines = [line.strip() for line in result.stdout.splitlines() if line.strip()]
-    except (OSError, subprocess.TimeoutExpired):
-        lines = []
+    except subprocess.TimeoutExpired as exc:
+        resolved = shutil.which(ESPEAK_BINARY) or ESPEAK_BINARY
+        raise RuntimeError(
+            f"eSpeak timed out after 15s ({resolved}). Test it with: "
+            "`printf 'Bună\\nziua\\n' | timeout 5 espeak -v ro --ipa -q`. "
+            "Install a working eSpeak binary and ensure it is first on PATH."
+        ) from exc
+    except (OSError, subprocess.CalledProcessError) as exc:
+        resolved = shutil.which(ESPEAK_BINARY) or ESPEAK_BINARY
+        stderr = getattr(exc, "stderr", "") or ""
+        raise RuntimeError(
+            f"eSpeak failed ({resolved}): {stderr.strip() or exc}"
+        ) from exc
+
+    lines = [line.strip() for line in result.stdout.splitlines() if line.strip()]
 
     if len(lines) == len(words):
         return lines
