@@ -152,7 +152,15 @@ def main(argv: list[str] | None = None) -> None:
         train_samples=train_samples,
         eval_samples=eval_samples,
     )
-    trainer.fit()
+    try:
+        trainer.fit()
+    finally:
+        # Trainer 0.3.3 leaves the DDP process group initialized at normal
+        # interpreter shutdown, which PyTorch 2.4+ reports as a warning.
+        import torch.distributed as dist
+
+        if dist.is_available() and dist.is_initialized():
+            dist.destroy_process_group()
 
 
 def _init_tokenizer(config):
