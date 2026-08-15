@@ -43,6 +43,18 @@ def test_to_f5_dataset_symlinks_and_metadata(tmp_path):
         assert link.is_symlink() and link.resolve().exists()
 
 
+def test_abs_paths_writes_absolute_audio_paths(tmp_path):
+    root = tmp_path / "MARA"
+    m = _make_corpus(root, "mara", [("wavs/a.wav", "ˈa")])
+    out = tmp_path / "f5ds"
+    to_f5_dataset([(m, root)], out, abs_paths=True)
+
+    rows = [l for l in (out / "metadata.csv").read_text(encoding="utf-8").splitlines()[1:]]
+    audio = rows[0].split("|")[0]
+    assert audio.startswith("/")               # absolute
+    assert audio.endswith("wavs/mara__a.wav")
+
+
 def test_skips_missing_wav_and_empty_text(tmp_path):
     root = tmp_path / "C"
     (root / "wavs").mkdir(parents=True)

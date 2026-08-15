@@ -55,12 +55,15 @@ def to_f5_dataset(
     out_dir: Path,
     *,
     copy: bool = False,
+    abs_paths: bool = False,
 ) -> PrepareStats:
     """Build the F5 dataset dir from (manifest, corpus_root) pairs.
 
     `copy=True` copies wavs instead of symlinking (use if the training reads
-    from a filesystem that can't follow the symlinks)."""
-    out_dir = Path(out_dir)
+    from a filesystem that can't follow the symlinks). `abs_paths=True` writes
+    absolute `audio_file` paths in metadata.csv — required by f5-tts versions
+    whose `prepare_csv_wavs` rejects relative paths."""
+    out_dir = Path(out_dir).resolve() if abs_paths else Path(out_dir)
     wavs_dir = out_dir / "wavs"
     wavs_dir.mkdir(parents=True, exist_ok=True)
     stats = PrepareStats()
@@ -90,7 +93,8 @@ def to_f5_dataset(
                 else:
                     os.symlink(src, dst)
 
-                meta.write(f"wavs/{dst_name}|{phonemes}\n")
+                audio_field = str(dst) if abs_paths else f"wavs/{dst_name}"
+                meta.write(f"{audio_field}|{phonemes}\n")
                 stats.written += 1
 
     return stats
@@ -102,13 +106,18 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--corpus-root", action="append", required=True, type=Path)
     parser.add_argument("--out", required=True, type=Path)
     parser.add_argument("--copy", action="store_true", help="copy wavs instead of symlinking")
+    parser.add_argument(
+        "--abs-paths", action="store_true",
+        help="write absolute audio paths (required by some f5-tts prepare_csv_wavs versions)",
+    )
     args = parser.parse_args(argv)
 
     if len(args.manifest) != len(args.corpus_root):
         parser.error("pass one --corpus-root per --manifest")
 
     stats = to_f5_dataset(
-        list(zip(args.manifest, args.corpus_root)), args.out, copy=args.copy
+        list(zip(args.manifest, args.corpus_root)), args.out,
+        copy=args.copy, abs_paths=args.abs_paths,
     )
     print(f"F5 dataset: {args.out}")
     print(f"  written:               {stats.written}")
