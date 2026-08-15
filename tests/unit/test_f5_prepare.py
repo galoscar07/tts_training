@@ -1,6 +1,17 @@
 """Unit test for the F5 dataset adapter. Pure stdlib — no F5, no models."""
 
+import wave
+
 from tts_training.f5.prepare import to_f5_dataset
+
+
+def _write_wav(path, seconds, rate=22050):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with wave.open(str(path), "wb") as w:
+        w.setnchannels(1)
+        w.setsampwidth(2)
+        w.setframerate(rate)
+        w.writeframes(b"\x00\x00" * int(seconds * rate))
 
 
 def _make_corpus(root, name, rows):
@@ -53,6 +64,23 @@ def test_abs_paths_writes_absolute_audio_paths(tmp_path):
     audio = rows[0].split("|")[0]
     assert audio.startswith("/")               # absolute
     assert audio.endswith("wavs/mara__a.wav")
+
+
+def test_max_duration_drops_long_utterances(tmp_path):
+    root = tmp_path / "C"
+    _write_wav(root / "wavs" / "short.wav", seconds=1.0)
+    _write_wav(root / "wavs" / "long.wav", seconds=10.0)
+    manifest = root / "c.manifest"
+    manifest.write_text(
+        "wavs/short.wav|ˈa|spk|\nwavs/long.wav|bˈar|spk|\n", encoding="utf-8"
+    )
+    out = tmp_path / "f5ds"
+    stats = to_f5_dataset([(manifest, root)], out, max_duration=5.0)
+
+    assert stats.written == 1
+    assert stats.skipped_too_long == 1
+    rows = (out / "metadata.csv").read_text(encoding="utf-8").splitlines()[1:]
+    assert len(rows) == 1 and "short.wav" in rows[0]
 
 
 def test_skips_missing_wav_and_empty_text(tmp_path):

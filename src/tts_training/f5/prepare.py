@@ -26,7 +26,9 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import contextlib
 import os
+import wave
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -36,6 +38,7 @@ class PrepareStats:
     written: int = 0
     skipped_missing_wav: int = 0
     skipped_empty: int = 0
+    skipped_too_long: int = 0
 
 
 def _iter_manifest(manifest: Path):
@@ -50,19 +53,33 @@ def _iter_manifest(manifest: Path):
             yield parts[0], parts[1]  # rel_wav, phonemes
 
 
+def _wav_duration(path: Path) -> float | None:
+    """Seconds, read from the PCM WAV header (stdlib — no soundfile). Returns
+    None if the file can't be parsed (then we keep it rather than drop it)."""
+    try:
+        with contextlib.closing(wave.open(str(path), "rb")) as w:
+            rate = w.getframerate()
+            return w.getnframes() / float(rate) if rate else None
+    except Exception:
+        return None
+
+
 def to_f5_dataset(
     manifests: list[tuple[Path, Path]],
     out_dir: Path,
     *,
     copy: bool = False,
     abs_paths: bool = False,
+    max_duration: float | None = None,
 ) -> PrepareStats:
     """Build the F5 dataset dir from (manifest, corpus_root) pairs.
 
     `copy=True` copies wavs instead of symlinking (use if the training reads
     from a filesystem that can't follow the symlinks). `abs_paths=True` writes
     absolute `audio_file` paths in metadata.csv — required by f5-tts versions
-    whose `prepare_csv_wavs` rejects relative paths."""
+    whose `prepare_csv_wavs` rejects relative paths. `max_duration` (seconds)
+    drops utterances longer than the cap — long clips blow up attention memory
+    (O(seq_len²)) and cause single-sample CUDA OOMs on small GPUs."""
     out_dir = Path(out_dir).resolve() if abs_paths else Path(out_dir)
     wavs_dir = out_dir / "wavs"
     wavs_dir.mkdir(parents=True, exist_ok=True)
@@ -81,6 +98,11 @@ def to_f5_dataset(
                 if not src.exists():
                     stats.skipped_missing_wav += 1
                     continue
+                if max_duration is not None:
+                    dur = _wav_duration(src)
+                    if dur is not None and dur > max_duration:
+                        stats.skipped_too_long += 1
+                        continue
 
                 dst_name = f"{prefix}__{Path(rel_wav).name}"
                 dst = wavs_dir / dst_name
@@ -110,6 +132,10 @@ def main(argv: list[str] | None = None) -> None:
         "--abs-paths", action="store_true",
         help="write absolute audio paths (required by some f5-tts prepare_csv_wavs versions)",
     )
+    parser.add_argument(
+        "--max-duration", type=float, default=None,
+        help="drop utterances longer than N seconds (avoids single-sample CUDA OOM)",
+    )
     args = parser.parse_args(argv)
 
     if len(args.manifest) != len(args.corpus_root):
@@ -117,12 +143,13 @@ def main(argv: list[str] | None = None) -> None:
 
     stats = to_f5_dataset(
         list(zip(args.manifest, args.corpus_root)), args.out,
-        copy=args.copy, abs_paths=args.abs_paths,
+        copy=args.copy, abs_paths=args.abs_paths, max_duration=args.max_duration,
     )
     print(f"F5 dataset: {args.out}")
     print(f"  written:               {stats.written}")
     print(f"  skipped (missing wav): {stats.skipped_missing_wav}")
     print(f"  skipped (empty text):  {stats.skipped_empty}")
+    print(f"  skipped (too long):    {stats.skipped_too_long}")
     print(f"\nNext: build arrow/vocab with F5, then finetune (use the CHAR tokenizer):")
     print(f"  python -m f5_tts.train.datasets.prepare_csv_wavs {args.out} {args.out}_prepared --tokenizer char")
 
