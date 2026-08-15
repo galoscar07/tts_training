@@ -166,22 +166,33 @@ pip install -e ".[f5]"          # installs f5-tts (GPU box)
 # 1. manifests -> F5 dataset dir (symlinks; no 2.6 GB copy)
 python -m tts_training.f5.prepare \
     --manifest out/mara.manifest        --corpus-root datasets/MARA \
-    --manifest out/swara_train.manifest --corpus-root dataset/SWARA \
+    --manifest out/swara_train.manifest --corpus-root datasets/SWARA \
     --out data/ro_mara_swara_char
 
-# 2. F5 builds raw.arrow / duration.json / vocab.txt (CHAR tokenizer!)
-python -m f5_tts.train.datasets.prepare_csv_wavs \
-    data/ro_mara_swara_char data/ro_mara_swara_char --tokenizer char
+# 2. pip-installed f5-tts resolves data/ and ckpts/ relative to its package,
+#    not the repo — symlink them to the repo so it finds our dataset.
+ln -sfn "$PWD/data"  "$(python -c 'import f5_tts,os;print(os.path.dirname(os.path.dirname(os.path.dirname(f5_tts.__file__))))')/data"
 
-# 3. fine-tune from a pretrained base checkpoint
+# 3. finetune mode EXTENDS the base vocab, so fetch it where F5 looks
+mkdir -p data/Emilia_ZH_EN_pinyin
+cp "$(python -c "from huggingface_hub import hf_hub_download; print(hf_hub_download('SWivid/F5-TTS','F5TTS_v1_Base/vocab.txt'))")" \
+   data/Emilia_ZH_EN_pinyin/vocab.txt
+
+# 4. build raw.arrow / duration.json / vocab.txt. NO --pretrain = finetune
+#    mode = extend the base vocab with our IPA symbols (no embedding mismatch).
+python -m f5_tts.train.datasets.prepare_csv_wavs \
+    data/ro_mara_swara_char data/ro_mara_swara_char
+
+# 5. fine-tune from the pretrained base checkpoint
 f5-tts_finetune-cli --exp_name F5TTS_v1_Base --dataset_name ro_mara_swara \
-    --tokenizer char --finetune --pretrain <path/to/base/model.pt> \
-    --batch_size_per_gpu 3200 --learning_rate 1e-5
+    --tokenizer char --finetune --pretrain <path/to/F5TTS_v1_Base/model_1250000.safetensors> \
+    --batch_size_per_gpu 1600 --learning_rate 1e-5
 ```
 
-Exact flag names/paths vary by `f5-tts` version — treat step 2–3 as a first
-pass and adjust to your installed version (the adapter output in step 1 is the
-stable part). On 11 GB VRAM you'll likely lower `--batch_size_per_gpu`.
+Notes: `prepare_csv_wavs` has **no** `--tokenizer` flag; **omitting** `--pretrain`
+selects finetune/extend-vocab mode (which needs step 3's base vocab). Exact
+flags vary by `f5-tts` version — the adapter in step 1 is the stable part. On
+11 GB VRAM start with a small `--batch_size_per_gpu` (frames) and raise it.
 
 ## Extracting to its own repo
 

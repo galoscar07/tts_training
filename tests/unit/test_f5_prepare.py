@@ -27,7 +27,9 @@ def test_to_f5_dataset_symlinks_and_metadata(tmp_path):
     assert stats.written == 3
     assert stats.skipped_missing_wav == 0
 
-    lines = (out / "metadata.csv").read_text(encoding="utf-8").strip().splitlines()
+    all_lines = (out / "metadata.csv").read_text(encoding="utf-8").strip().splitlines()
+    assert all_lines[0] == "audio_file|text"   # F5-required header
+    lines = all_lines[1:]
     assert len(lines) == 3
     # per-manifest prefix keeps the two a.wav files distinct
     names = {line.split("|")[0] for line in lines}

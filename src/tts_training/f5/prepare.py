@@ -66,6 +66,7 @@ def to_f5_dataset(
     stats = PrepareStats()
 
     with (out_dir / "metadata.csv").open("w", encoding="utf-8") as meta:
+        meta.write("audio_file|text\n")  # F5's read_audio_text_pairs requires this header
         for manifest, corpus_root in manifests:
             prefix = Path(manifest).stem  # e.g. "mara", "swara_train"
             for rel_wav, phonemes in _iter_manifest(Path(manifest)):
