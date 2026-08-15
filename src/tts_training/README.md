@@ -109,6 +109,39 @@ share one multi-speaker model.
 | `vits/config.py` | yes (lazy) | base VITS config |
 | `train.py` | yes (lazy) | base training entry point |
 | `finetune.py` | — | emotion fine-tune scaffold (deferred) |
+| `synthesize.py` | yes (lazy) | inference: text → phonemes → VITS → wav, with `--postprocess` |
+| `postprocess.py` | **no** | audio realism filter chain (numpy/scipy) |
+
+## Synthesis & post-processing
+
+Inference mirrors training: text is phonemized by the frontend first, then fed
+to VITS (the model expects phonemes, `use_phonemes=False`). `--postprocess`
+adds an optional audio pass **after** synthesis to make the output sound less
+synthetic.
+
+```bash
+python -m tts_training.synthesize \
+    --checkpoint out/vits_ro_base/<run>/best_model.pth \
+    --config     out/vits_ro_base/<run>/config.json \
+    --text "Bună ziua, acesta este un test." \
+    --speaker mara \
+    --out sample.wav \
+    --postprocess
+```
+
+The post-process chain (`postprocess.PostProcessConfig`), in order:
+high-pass (DC/rumble removal) → trim silence → light room reverb → faint
+room-tone noise floor → loudness normalization (EBU R128) → peak limiting.
+Reverb/room-tone are seeded, so a given input is reproducible. Tune or disable
+any stage via `PostProcessConfig`. It's pure numpy/scipy, so you can also
+filter existing wavs without a model:
+
+```python
+from tts_training.synthesize import postprocess_file
+postprocess_file("raw.wav", "clean.wav")           # default realism preset
+```
+
+For true LUFS loudness (instead of the RMS fallback), `pip install pyloudnorm`.
 
 ## Extracting to its own repo
 
