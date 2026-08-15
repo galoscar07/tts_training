@@ -143,6 +143,46 @@ postprocess_file("raw.wav", "clean.wav")           # default realism preset
 
 For true LUFS loudness (instead of the RMS fallback), `pip install pyloudnorm`.
 
+## F5-TTS fine-tune (alternative acoustic model)
+
+F5-TTS is a **separate** flow-matching framework (`f5-tts`), not Coqui —
+different trainer, data format, and vocoder, and **no speaker embeddings**
+(it's zero-shot / reference-conditioned; you pick a voice at inference with a
+reference clip). We reuse the *same* MARA+SWARA IPA-phoneme manifests; the
+only bridge we own is `f5/prepare.py`, which turns them into F5's on-disk
+layout (symlinked `wavs/` + `metadata.csv`, phoneme text preserved).
+
+Plan: **fine-tune** a pretrained F5 checkpoint (the DiT/flow backbone starts
+pretrained — feasible on one 2080 Ti) with a **custom IPA-phoneme vocab**.
+Caveat: the pretrained text understanding (EN/ZH) does not transfer to IPA —
+F5 re-initializes the text-embedding table for our vocab, so that layer learns
+from your data while the acoustic backbone benefits from pretraining. Use the
+**char** tokenizer so the IPA text is never transliterated (F5's prepare
+defaults to pinyin).
+
+```bash
+pip install -e ".[f5]"          # installs f5-tts (GPU box)
+
+# 1. manifests -> F5 dataset dir (symlinks; no 2.6 GB copy)
+python -m tts_training.f5.prepare \
+    --manifest out/mara.manifest        --corpus-root datasets/MARA \
+    --manifest out/swara_train.manifest --corpus-root dataset/SWARA \
+    --out data/ro_mara_swara_char
+
+# 2. F5 builds raw.arrow / duration.json / vocab.txt (CHAR tokenizer!)
+python -m f5_tts.train.datasets.prepare_csv_wavs \
+    data/ro_mara_swara_char data/ro_mara_swara_char --tokenizer char
+
+# 3. fine-tune from a pretrained base checkpoint
+f5-tts_finetune-cli --exp_name F5TTS_v1_Base --dataset_name ro_mara_swara \
+    --tokenizer char --finetune --pretrain <path/to/base/model.pt> \
+    --batch_size_per_gpu 3200 --learning_rate 1e-5
+```
+
+Exact flag names/paths vary by `f5-tts` version — treat step 2–3 as a first
+pass and adjust to your installed version (the adapter output in step 1 is the
+stable part). On 11 GB VRAM you'll likely lower `--batch_size_per_gpu`.
+
 ## Extracting to its own repo
 
 Copy `src/tts_training/`, add `expressive-tts` (the frontend) as a dependency

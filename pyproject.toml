@@ -59,6 +59,13 @@ training = [
     # install this extra in the training environment's interpreter.
     "coqui-tts>=0.24",
 ]
+f5 = [
+    # F5-TTS fine-tuning (src/tts_training/f5). A separate flow-matching TTS
+    # framework with its own trainer/vocoder. GPU box only. Our
+    # `tts_training.f5.prepare` adapter needs none of this (pure stdlib) — it
+    # just builds the dataset dir F5 consumes.
+    "f5-tts>=0.6",
+]
 
 [project.scripts]
 tts-preprocess = "expressive_tts.preprocess.cli:main"
