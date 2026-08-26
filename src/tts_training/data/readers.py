@@ -167,22 +167,49 @@ def swara_metadata_reader(metadata_rel: str) -> DatasetReader:
 # --- CATALINA (single speaker, emotional) ----------------------------------
 
 
-def catalina_reader(corpus_root: Path) -> Iterator[Utterance]:
-    """CATALINA single-speaker set. ``metadata.csv`` rows are
-    ``path|emotion|text``; the real audio is ``wavs/<basename of path>`` (the
-    stale ``data/`` prefix simply becomes ``wavs/``, same filename). Pairing is
-    by **filename**, which is exact. Speaker is ``catalina``; the emotion column
-    is ignored (these models have no emotion conditioning).
+# Romanian emotion word (metadata) -> English token used in the renamed subset
+# (`catalina_<token>_NNNN.wav`). Only needed to place the renamed files.
+CATALINA_EMOTION_MAP = {
+    "furios": "angry",
+    "fericit": "happy",
+    "neutru": "neutral",
+    "calm": "calm",
+}
 
-    A curated subset was separately renamed to
-    ``catalina_<en-emotion>_NNNN.wav`` and the original-named copies removed;
-    those rows won't resolve by basename and are dropped by the manifest
-    builder (counted as missing). The remaining originally-named files
-    (~1.1k) pair reliably.
+
+def catalina_reader(corpus_root: Path) -> Iterator[Utterance]:
+    """CATALINA single-speaker set — pairs ALL rows, no skips.
+
+    ``metadata.csv`` rows are ``path|emotion|text``. Two cases:
+
+    * **Originally-named files** — the real audio is ``wavs/<basename of path>``
+      (stale ``data/`` prefix -> ``wavs/``, same filename). Exact pairing.
+    * **Renamed subset** — a curated subset was renamed to
+      ``catalina_<en-emotion>_NNNN.wav`` and the original copies removed, so
+      their metadata basename no longer exists. These are paired by
+      **emotion + order**: the k-th metadata row of an emotion whose original
+      file is missing maps to the k-th sorted ``catalina_<token>_*.wav``. Per
+      emotion the counts match exactly, so this consumes every renamed file.
+
+    The renamed-subset pairing assumes the rename preserved metadata order
+    (verify by listening to a couple). Speaker is ``catalina``; emotion is
+    ignored by the acoustic models.
     """
+    import re
+    from collections import defaultdict
+
     meta = corpus_root / "metadata.csv"
     if not meta.exists():
         raise FileNotFoundError(f"CATALINA metadata not found: {meta}")
+
+    existing = {p.name for p in (corpus_root / "wavs").glob("*.wav")}
+    renamed: dict[str, list[str]] = defaultdict(list)
+    for name in sorted(existing):
+        m = re.match(r"catalina_([a-z]+)_\d+\.wav$", name)
+        if m:
+            renamed[m.group(1)].append(name)
+
+    used_renamed: dict[str, int] = defaultdict(int)
     with meta.open(encoding="utf-8") as handle:
         for raw in handle:
             line = raw.rstrip("\n")
@@ -191,11 +218,17 @@ def catalina_reader(corpus_root: Path) -> Iterator[Utterance]:
             parts = line.split("|", 2)
             if len(parts) < 3:
                 continue
-            path, _emotion, text = parts
+            path, emotion, text = parts
             name = Path(path).name
-            if not name:
-                continue
-            yield Utterance(rel_wav=f"wavs/{name}", text=text.strip(), speaker="catalina")
+            if name in existing:
+                rel_wav = f"wavs/{name}"
+            else:
+                token = CATALINA_EMOTION_MAP.get(emotion.strip().lower(), emotion.strip().lower())
+                bucket = renamed.get(token, [])
+                k = used_renamed[token]
+                used_renamed[token] += 1
+                rel_wav = f"wavs/{bucket[k]}" if k < len(bucket) else f"wavs/{name}"
+            yield Utterance(rel_wav=rel_wav, text=text.strip(), speaker="catalina")
 
 
 # --- Common Voice (Mozilla) ------------------------------------------------
