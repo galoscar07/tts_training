@@ -28,18 +28,40 @@ from __future__ import annotations
 import argparse
 import csv
 import re
+import subprocess
+import sys
 from pathlib import Path
 
 import numpy as np
 import soundfile as sf
 
-from expressive_tts.preprocess.pipeline import PreprocessPipeline
 from tts_training.postprocess import PostProcessConfig, postprocess
 from tts_training.synthesize import list_model_speakers
 
 
 def _slug(name: str) -> str:
     return re.sub(r"[^A-Za-z0-9._-]+", "_", name).strip("_") or "speaker"
+
+
+def _phonemize(sentences: list[str], out_dir: Path, phonemes_file: Path | None) -> list[str]:
+    """IPA phonemes for each sentence. The frontend runs in a SEPARATE process
+    (Coqui-TTS + Stanza/espeak in one interpreter can segfault), unless a
+    pre-computed `--phonemes` file is supplied."""
+    if phonemes_file is not None:
+        phs = phonemes_file.read_text(encoding="utf-8").splitlines()
+        if len(phs) < len(sentences):
+            raise SystemExit(f"--phonemes has {len(phs)} lines, need {len(sentences)}")
+        return [p.strip() for p in phs[: len(sentences)]]
+
+    out_dir.mkdir(parents=True, exist_ok=True)
+    sent_file = out_dir / "_sentences.txt"
+    ph_file = out_dir / "_phonemes.txt"
+    sent_file.write_text("\n".join(sentences) + "\n", encoding="utf-8")
+    subprocess.run(
+        [sys.executable, "-m", "tts_training.phonemize", "--in", str(sent_file), "--out", str(ph_file)],
+        check=True,
+    )
+    return [p.strip() for p in ph_file.read_text(encoding="utf-8").splitlines()][: len(sentences)]
 
 
 def _select_speakers(all_speakers, explicit, exclude, limit):
@@ -70,6 +92,7 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--exclude", default=None, help="comma list of speakers to drop (e.g. mara)")
     parser.add_argument("--limit-speakers", type=int, default=None, help="keep first N remaining speakers")
     parser.add_argument("--out-dir", required=True, type=Path)
+    parser.add_argument("--phonemes", type=Path, default=None, help="pre-computed IPA per line (skips the frontend subprocess)")
     parser.add_argument("--no-cuda", action="store_true", help="run on CPU (VITS is fast on CPU)")
     parser.add_argument("--postprocess", action="store_true")
     parser.add_argument("--list-speakers", action="store_true", help="print speakers and exit")
@@ -106,12 +129,8 @@ def main(argv: list[str] | None = None) -> None:
 
     print(f"{len(speakers)} speaker(s) × {len(sentences)} sentence(s) = {len(speakers) * len(sentences)} clips")
 
-    pipeline = PreprocessPipeline()
-    gen_phonemes = [
-        (pipeline.process(s, include={"phonemes"}).phoneme_text or "").strip() for s in sentences
-    ]
-
     args.out_dir.mkdir(parents=True, exist_ok=True)
+    gen_phonemes = _phonemize(sentences, args.out_dir, args.phonemes)
     rows = []
     total = 0
     for speaker in speakers:
