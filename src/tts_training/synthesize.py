@@ -96,6 +96,9 @@ def main(argv: list[str] | None = None) -> None:
     args = parser.parse_args(argv)
 
     # --- Coqui (lazy) -----------------------------------------------------
+    from tts_training._coqui_compat import ensure_coqui_importable
+
+    ensure_coqui_importable()
     from TTS.utils.synthesizer import Synthesizer
 
     synthesizer = Synthesizer(
