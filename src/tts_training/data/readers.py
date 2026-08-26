@@ -166,48 +166,23 @@ def swara_metadata_reader(metadata_rel: str) -> DatasetReader:
 
 # --- CATALINA (single speaker, emotional) ----------------------------------
 
-# Romanian emotion word (metadata col 2) -> the English token used in the wav
-# filenames (`catalina_<token>_NNNN.wav`). Extend if your emotions differ; the
-# manifest builder's "skipped (missing wav)" count flags any unmatched bucket.
-CATALINA_EMOTION_MAP = {
-    "furios": "angry",
-    "trist": "sad",
-    "fericit": "happy",
-    "bucuros": "happy",
-    "neutru": "neutral",
-    "neutral": "neutral",
-    "speriat": "fear",
-    "frica": "fear",
-    "surprins": "surprise",
-    "surprindere": "surprise",
-    "dezgustat": "disgust",
-    "dezgust": "disgust",
-    "calm": "calm",
-}
-
 
 def catalina_reader(corpus_root: Path) -> Iterator[Utterance]:
-    """CATALINA: `metadata.csv` rows are ``path|emotion|text`` (emotion in
-    Romanian). The metadata ``path`` column is stale, so each row is paired to
-    an actual file in ``wavs/catalina_<english-emotion>_NNNN.wav`` by
-    **(emotion bucket, order)**: the i-th metadata row of a given emotion maps
-    to the i-th sorted wav of the matching English emotion token
-    (`furios`->`angry`, ...). Single speaker ``catalina``.
-    """
-    import re
-    from collections import defaultdict
+    """CATALINA single-speaker set. ``metadata.csv`` rows are
+    ``path|emotion|text``; the real audio is ``wavs/<basename of path>`` (the
+    stale ``data/`` prefix simply becomes ``wavs/``, same filename). Pairing is
+    by **filename**, which is exact. Speaker is ``catalina``; the emotion column
+    is ignored (these models have no emotion conditioning).
 
+    A curated subset was separately renamed to
+    ``catalina_<en-emotion>_NNNN.wav`` and the original-named copies removed;
+    those rows won't resolve by basename and are dropped by the manifest
+    builder (counted as missing). The remaining originally-named files
+    (~1.1k) pair reliably.
+    """
     meta = corpus_root / "metadata.csv"
     if not meta.exists():
         raise FileNotFoundError(f"CATALINA metadata not found: {meta}")
-
-    wavs_by_emotion: dict[str, list[str]] = defaultdict(list)
-    for wav in sorted((corpus_root / "wavs").glob("*.wav")):
-        m = re.match(r"catalina_([a-z]+)_\d+", wav.stem)
-        if m:
-            wavs_by_emotion[m.group(1)].append(wav.name)
-
-    index: dict[str, int] = defaultdict(int)
     with meta.open(encoding="utf-8") as handle:
         for raw in handle:
             line = raw.rstrip("\n")
@@ -216,13 +191,11 @@ def catalina_reader(corpus_root: Path) -> Iterator[Utterance]:
             parts = line.split("|", 2)
             if len(parts) < 3:
                 continue
-            _stale_path, emotion, text = parts
-            token = CATALINA_EMOTION_MAP.get(emotion.strip().lower(), emotion.strip().lower())
-            bucket = wavs_by_emotion.get(token, [])
-            i = index[token]
-            index[token] += 1
-            rel_wav = f"wavs/{bucket[i]}" if i < len(bucket) else f"wavs/catalina_{token}_MISSING_{i:04d}.wav"
-            yield Utterance(rel_wav=rel_wav, text=text.strip(), speaker="catalina")
+            path, _emotion, text = parts
+            name = Path(path).name
+            if not name:
+                continue
+            yield Utterance(rel_wav=f"wavs/{name}", text=text.strip(), speaker="catalina")
 
 
 # --- Common Voice (Mozilla) ------------------------------------------------
