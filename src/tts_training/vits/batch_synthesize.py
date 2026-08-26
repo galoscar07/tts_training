@@ -25,18 +25,27 @@ Examples (run from the repo root):
 
 from __future__ import annotations
 
-import argparse
-import csv
-import re
-import subprocess
-import sys
-from pathlib import Path
+# IMPORT ORDER MATTERS: Coqui-TTS (torch) must load BEFORE numpy/scipy/
+# soundfile/expressive_tts. Loading their native BLAS/OpenMP before torch
+# segfaults Coqui-TTS (confirmed on the training box). So torch+TTS come first,
+# everything else after — do not reorder.
+from tts_training._coqui_compat import ensure_coqui_importable
 
-import numpy as np
-import soundfile as sf
+ensure_coqui_importable()
+from TTS.utils.synthesizer import Synthesizer  # noqa: E402
 
-from tts_training.postprocess import PostProcessConfig, postprocess
-from tts_training.synthesize import list_model_speakers
+import argparse  # noqa: E402
+import csv  # noqa: E402
+import re  # noqa: E402
+import subprocess  # noqa: E402
+import sys  # noqa: E402
+from pathlib import Path  # noqa: E402
+
+import numpy as np  # noqa: E402
+import soundfile as sf  # noqa: E402
+
+from tts_training.postprocess import PostProcessConfig, postprocess  # noqa: E402
+from tts_training.synthesize import list_model_speakers  # noqa: E402
 
 
 def _slug(name: str) -> str:
@@ -97,12 +106,6 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--postprocess", action="store_true")
     parser.add_argument("--list-speakers", action="store_true", help="print speakers and exit")
     args = parser.parse_args(argv)
-
-    # --- Coqui (lazy) -----------------------------------------------------
-    from tts_training._coqui_compat import ensure_coqui_importable
-
-    ensure_coqui_importable()
-    from TTS.utils.synthesizer import Synthesizer
 
     synthesizer = Synthesizer(
         tts_checkpoint=str(args.checkpoint),
