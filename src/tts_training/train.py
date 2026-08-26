@@ -84,6 +84,11 @@ def main(argv: list[str] | None = None) -> None:
             parser.error(f"corpus root does not exist: {corpus_root}")
 
     # --- Coqui imports (GPU box only) -------------------------------------
+    # Restore helpers newer `transformers` removed but coqui-tts's XTTS import
+    # chain still references (e.g. isin_mps_friendly) — must run before TTS.
+    from tts_training._coqui_compat import ensure_coqui_importable
+
+    ensure_coqui_importable()
     from trainer import Trainer, TrainerArgs
     from TTS.tts.datasets import load_tts_samples
     from TTS.tts.datasets import dataset as tts_dataset
