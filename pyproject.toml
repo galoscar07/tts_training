@@ -66,6 +66,13 @@ f5 = [
     # just builds the dataset dir F5 consumes.
     "f5-tts>=0.6",
 ]
+eval = [
+    # Objective TTS metrics (objective_evaluation.tts_objective): MCD, PESQ,
+    # STOI. librosa (F0) + matplotlib (diagrams) come with the training extra.
+    "pymcd>=0.2",
+    "pesq>=0.0.4",
+    "pystoi>=0.4",
+]
 
 [project.scripts]
 tts-preprocess = "expressive_tts.preprocess.cli:main"
