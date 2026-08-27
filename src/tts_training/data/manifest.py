@@ -26,6 +26,7 @@ import argparse
 import sys
 import time
 from dataclasses import dataclass, field
+from functools import partial
 from pathlib import Path
 
 from expressive_tts.preprocess.pipeline import PreprocessPipeline
@@ -52,6 +53,9 @@ DATASETS: dict[str, DatasetReader] = {
     "swara_train": swara_metadata_reader("SWARA_ALL_training.csv"),
     "swara_test": swara_metadata_reader("SWARA_ALL_testing.csv"),
     "catalina": catalina_reader,
+    # emotion as speaker id (catalina_angry/happy/neutral/calm) -> lets a
+    # multi-speaker VITS select emotion via --speaker. Needs its own fine-tune.
+    "catalina_emotions": partial(catalina_reader, per_emotion_speaker=True),
     "common_voice": common_voice_reader(),
 }
 

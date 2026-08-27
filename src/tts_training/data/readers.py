@@ -177,8 +177,14 @@ CATALINA_EMOTION_MAP = {
 }
 
 
-def catalina_reader(corpus_root: Path) -> Iterator[Utterance]:
+def catalina_reader(corpus_root: Path, per_emotion_speaker: bool = False) -> Iterator[Utterance]:
     """CATALINA single-speaker set — pairs ALL rows, no skips.
+
+    `per_emotion_speaker=True` sets the speaker to ``catalina_<emotion>``
+    (angry/happy/neutral/calm) instead of a single ``catalina`` — so a
+    multi-speaker VITS can be told which emotion to speak via `--speaker
+    catalina_angry`, etc. (emotion-as-speaker-slot; needs a fine-tune on this
+    manifest).
 
     ``metadata.csv`` rows are ``path|emotion|text``. Two cases:
 
@@ -219,16 +225,17 @@ def catalina_reader(corpus_root: Path) -> Iterator[Utterance]:
             if len(parts) < 3:
                 continue
             path, emotion, text = parts
+            token = CATALINA_EMOTION_MAP.get(emotion.strip().lower(), emotion.strip().lower())
             name = Path(path).name
             if name in existing:
                 rel_wav = f"wavs/{name}"
             else:
-                token = CATALINA_EMOTION_MAP.get(emotion.strip().lower(), emotion.strip().lower())
                 bucket = renamed.get(token, [])
                 k = used_renamed[token]
                 used_renamed[token] += 1
                 rel_wav = f"wavs/{bucket[k]}" if k < len(bucket) else f"wavs/{name}"
-            yield Utterance(rel_wav=rel_wav, text=text.strip(), speaker="catalina")
+            speaker = f"catalina_{token}" if per_emotion_speaker else "catalina"
+            yield Utterance(rel_wav=rel_wav, text=text.strip(), speaker=speaker)
 
 
 # --- Common Voice (Mozilla) ------------------------------------------------
