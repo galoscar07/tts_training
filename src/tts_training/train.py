@@ -157,10 +157,40 @@ def main(argv: list[str] | None = None) -> None:
     tokenizer, config = _init_tokenizer(config)
     model = Vits(config, ap, tokenizer, speaker_manager=speaker_manager)
 
+    # Warm-start weights ourselves instead of relying on TrainerArgs.restore_path.
+    # trainer.distribute injects an empty `--continue_path=`/`--restore_path=`
+    # into every worker, which under DDP shadows our --restore-path and makes
+    # Coqui silently cold-start (step-0 loss_mel ~90 instead of ~18). Loading
+    # here — shape-filtered so a speaker-count/emb_g mismatch skips just that
+    # tensor rather than raising — guarantees a warm start with a FRESH
+    # optimizer and step counter (what we want for a fine-tune). Because we've
+    # loaded the weights, we pass restore_path=None to the Trainer below.
+    if args.restore_path:
+        import torch as _torch
+
+        ckpt = _torch.load(args.restore_path, map_location="cpu", weights_only=False)
+        state = ckpt.get("model", ckpt)
+        model_sd = model.state_dict()
+        compatible, shape_skipped = {}, []
+        for key, value in state.items():
+            if key in model_sd and model_sd[key].shape == value.shape:
+                compatible[key] = value
+            elif key in model_sd:
+                shape_skipped.append(key)
+        missing, unexpected = model.load_state_dict(compatible, strict=False)
+        print(
+            f"[rank {args.rank}] warm-started from {args.restore_path}: "
+            f"loaded={len(compatible)} shape-skipped={len(shape_skipped)} "
+            f"missing={len(missing)} unexpected={len(unexpected)}",
+            flush=True,
+        )
+        if shape_skipped:
+            print(f"[rank {args.rank}]   shape-skipped (re-init): {shape_skipped[:8]}", flush=True)
+
     trainer = Trainer(
         TrainerArgs(
             continue_path=args.continue_path,
-            restore_path=args.restore_path,
+            restore_path=None,  # weights already warm-loaded above
             best_path=args.best_path,
             use_ddp=args.use_ddp,
             use_accelerate=args.use_accelerate,
