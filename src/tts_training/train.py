@@ -50,6 +50,10 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--print-step", type=int, default=25)
     parser.add_argument("--save-step", type=int, default=5000)
     parser.add_argument("--save-n-checkpoints", type=int, default=5)
+    parser.add_argument(
+        "--lr", type=float, default=None,
+        help="generator+discriminator learning rate (default: Coqui's 2e-4; use ~1e-4 or lower to fine-tune)",
+    )
 
     # trainer.distribute appends these arguments to every worker process.
     # Keep underscore spellings because that is the TrainerArgs CLI contract.
@@ -130,6 +134,7 @@ def main(argv: list[str] | None = None) -> None:
         save_step=args.save_step,
         save_n_checkpoints=args.save_n_checkpoints,
         manifest_paths=manifests,
+        lr=args.lr,
     )
     config.datasets = [
         BaseDatasetConfig(

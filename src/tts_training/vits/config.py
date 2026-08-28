@@ -36,11 +36,17 @@ def base_vits_config(
     save_n_checkpoints: int = 5,
     manifest_paths: Iterable[str | Path] | None = None,
     multi_speaker: bool = True,
+    lr: float | None = None,
 ):
     """Return a Coqui `VitsConfig` for base (neutral) training.
 
     `manifest` is a file from `tts_training.data.manifest`; `corpus_root` is
     the corpus directory its `audio_file` paths are relative to.
+
+    `lr` overrides both generator and discriminator learning rates (Coqui's
+    default is 2e-4). Lower it when fine-tuning a trained model on a small
+    corpus — the default rate over ~1.4k utterances walks the model away from
+    the voice it already learned.
     """
     from TTS.config.shared_configs import BaseAudioConfig
     from TTS.tts.configs.shared_configs import BaseDatasetConfig
@@ -74,6 +80,8 @@ def base_vits_config(
         # is neutral, so no emotion embedding here.
     )
 
+    lr_kwargs = {} if lr is None else {"lr_gen": lr, "lr_disc": lr}
+
     return VitsConfig(
         model_args=model_args,
         audio=audio,
@@ -96,4 +104,5 @@ def base_vits_config(
         datasets=[dataset],
         test_sentences=[],          # phoneme-string test inputs can be added later
         use_speaker_embedding=multi_speaker,
+        **lr_kwargs,
     )
