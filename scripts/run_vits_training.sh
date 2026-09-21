@@ -15,7 +15,16 @@ LAST_STATUS_FILE="$CONTROL_DIR/last-exit-status"
 mkdir -p "$RUN_ROOT" "$CONTROL_DIR"
 
 usage() {
-    echo "Usage: $0 {start|smoke|status|logs|gpu-logs|stop}"
+    echo "Usage: $0 {start|foreground|smoke|status|logs|gpu-logs|report|stop}"
+    echo
+    echo "  start       preflight, then detach and train in the background (setsid)"
+    echo "  foreground  preflight, then train in THIS shell — use inside tmux/screen"
+    echo "  smoke       one short epoch on 256 samples, to prove the pipeline runs"
+    echo "  report      digest the current training log (is it still learning?)"
+    echo
+    echo "Knobs: VITS_GPUS VITS_BATCH_SIZE VITS_EVAL_BATCH_SIZE VITS_WORKERS"
+    echo "       VITS_EVAL_WORKERS VITS_EPOCHS VITS_PRINT_STEP VITS_SAVE_STEP"
+    echo "       VITS_SAVE_N VITS_RUN_ROOT VITS_PYTHON"
 }
 
 is_running() {
@@ -149,9 +158,9 @@ run_training() {
         --num-loader-workers "${VITS_WORKERS:-4}" \
         --num-eval-loader-workers "${VITS_EVAL_WORKERS:-2}" \
         --epochs "$([ "$mode" = "smoke" ] && echo 1 || echo "${VITS_EPOCHS:-1000}")" \
-        --print-step "$([ "$mode" = "smoke" ] && echo 5 || echo 25)" \
-        --save-step "$([ "$mode" = "smoke" ] && echo 100 || echo 5000)" \
-        --save-n-checkpoints "$([ "$mode" = "smoke" ] && echo 2 || echo 5)" \
+        --print-step "$([ "$mode" = "smoke" ] && echo 5 || echo "${VITS_PRINT_STEP:-25}")" \
+        --save-step "$([ "$mode" = "smoke" ] && echo 100 || echo "${VITS_SAVE_STEP:-5000}")" \
+        --save-n-checkpoints "$([ "$mode" = "smoke" ] && echo 2 || echo "${VITS_SAVE_N:-5}")" \
         2>&1 | tee "$train_log"
     local status=${PIPESTATUS[0]}
     set -e
@@ -174,6 +183,17 @@ case "${1:-}" in
     start)
         start_background full
         ;;
+    foreground|fg)
+        # Train in this shell so a tmux/screen pane owns the process — `start`
+        # would setsid away from the pane, which defeats the point of tmux.
+        # Ctrl-C (or `stop` from another pane) ends it.
+        if is_running; then
+            echo "VITS is already running (PID $(cat "$PID_FILE"))."
+            exit 1
+        fi
+        preflight
+        run_training "${2:-full}"
+        ;;
     smoke)
         start_background smoke
         ;;
@@ -195,10 +215,16 @@ case "${1:-}" in
         [ -f "$CURRENT_GPU_LOG_FILE" ] || { echo "No GPU log yet."; exit 1; }
         tail -n 40 -F "$(cat "$CURRENT_GPU_LOG_FILE")"
         ;;
+    report)
+        shift
+        "${VITS_REPORT_PYTHON:-python3}" "$REPO_ROOT/scripts/vits_train_report.py" "$@"
+        ;;
     stop)
         if is_running; then
             pid="$(cat "$PID_FILE")"
-            kill -TERM -- "-$pid"
+            # Group kill reaches the four DDP workers; fall back to the bare
+            # PID if this run was not a process-group leader.
+            kill -TERM -- "-$pid" 2>/dev/null || kill -TERM "$pid"
             echo "Sent TERM to VITS process group $pid."
         else
             echo "VITS is not running."
