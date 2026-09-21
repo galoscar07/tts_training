@@ -36,23 +36,37 @@ preflight() {
         echo "ERROR: virtual-environment Python not found: $PYTHON" >&2
         return 1
     }
-    "$PYTHON" - <<'PY'
+    REPO_ROOT="$REPO_ROOT" "$PYTHON" - <<'PY'
+import os
 import sys
 
+sys.path.insert(0, os.path.join(os.environ["REPO_ROOT"], "src"))
+
+import torch
+import transformers
+
+# Exercise the SAME import path train.py uses. Checking for
+# transformers.pytorch_utils.isin_mps_friendly directly made this preflight
+# stricter than the real run: the shim re-adds that symbol, so the raw import
+# failed on environments that train perfectly well.
 try:
-    import torch
-    import transformers
-    from transformers.pytorch_utils import isin_mps_friendly  # noqa: F401
+    from tts_training._coqui_compat import ensure_coqui_importable
+
+    ensure_coqui_importable()
+except Exception as exc:
+    raise SystemExit(f"ERROR: could not load the coqui compat shim: {exc}")
+
+try:
     from TTS.tts.models.vits import Vits  # noqa: F401
 except Exception as exc:
-    raise SystemExit(f"ERROR: training preflight import failed: {exc}")
+    hint = ""
+    if int(transformers.__version__.split(".", 1)[0]) >= 5:
+        hint = (
+            f"\n       transformers {transformers.__version__} is newer than "
+            "coqui-tts 0.27.x expects — try: pip install transformers==4.57.6"
+        )
+    raise SystemExit(f"ERROR: training preflight import failed: {exc}{hint}")
 
-major = int(transformers.__version__.split(".", 1)[0])
-if major >= 5:
-    raise SystemExit(
-        f"ERROR: transformers {transformers.__version__} is incompatible with "
-        "coqui-tts 0.27.x; install transformers==4.57.6"
-    )
 if not torch.cuda.is_available() or torch.cuda.device_count() < 4:
     raise SystemExit(
         f"ERROR: expected 4 CUDA GPUs, found {torch.cuda.device_count()}"
@@ -60,7 +74,8 @@ if not torch.cuda.is_available() or torch.cuda.device_count() < 4:
 
 print(
     f"Preflight OK: torch={torch.__version__}, "
-    f"transformers={transformers.__version__}, GPUs={torch.cuda.device_count()}"
+    f"transformers={transformers.__version__}, "
+    f"VITS import OK, GPUs={torch.cuda.device_count()}"
 )
 PY
     [ -s "$REPO_ROOT/out/mara.manifest" ] || {
