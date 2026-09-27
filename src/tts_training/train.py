@@ -51,6 +51,17 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--save-step", type=int, default=5000)
     parser.add_argument("--save-n-checkpoints", type=int, default=5)
     parser.add_argument(
+        "--vocab-manifest", "--vocab_manifest", dest="vocab_manifest",
+        action="append", type=Path, default=None,
+        help=(
+            "extra manifest(s) that contribute symbols to the character vocab but are "
+            "NOT trained on. When fine-tuning, pass the base model's manifests so the "
+            "token ids stay byte-identical — otherwise a smaller corpus yields a "
+            "smaller vocab, the sorted order shifts, and the warm-started text "
+            "encoder is misaligned against its own embedding table."
+        ),
+    )
+    parser.add_argument(
         "--lr", type=float, default=None,
         help="generator+discriminator learning rate (default: Coqui's 2e-4; use ~1e-4 or lower to fine-tune)",
     )
@@ -80,7 +91,8 @@ def main(argv: list[str] | None = None) -> None:
 
     manifests = [path.resolve() for path in args.manifest]
     corpus_roots = [path.resolve() for path in args.corpus_root]
-    for manifest in manifests:
+    vocab_manifests = [path.resolve() for path in (args.vocab_manifest or [])]
+    for manifest in manifests + vocab_manifests:
         if not manifest.is_file():
             parser.error(f"manifest does not exist: {manifest}")
     for corpus_root in corpus_roots:
@@ -133,7 +145,7 @@ def main(argv: list[str] | None = None) -> None:
         print_step=args.print_step,
         save_step=args.save_step,
         save_n_checkpoints=args.save_n_checkpoints,
-        manifest_paths=manifests,
+        manifest_paths=manifests + vocab_manifests,
         lr=args.lr,
     )
     config.datasets = [

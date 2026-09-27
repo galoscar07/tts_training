@@ -36,6 +36,7 @@ from tts_training.data.readers import (
     DatasetReader,
     catalina_reader,
     common_voice_reader,
+    emotion_reader,
     ljspeech_reader,
     swara_metadata_reader,
     swara_reader,
@@ -56,6 +57,10 @@ DATASETS: dict[str, DatasetReader] = {
     # emotion as speaker id (catalina_angry/happy/neutral/calm) -> lets a
     # multi-speaker VITS select emotion via --speaker. Needs its own fine-tune.
     "catalina_emotions": partial(catalina_reader, per_emotion_speaker=True),
+    # TIBI: same `path|emotion|text` metadata, but the paths already resolve,
+    # so it needs none of CATALINA's renamed-subset pairing.
+    "tibi": emotion_reader("tibi", per_emotion_speaker=False),
+    "tibi_emotions": emotion_reader("tibi"),
     "common_voice": common_voice_reader(),
 }
 

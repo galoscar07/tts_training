@@ -164,12 +164,13 @@ def swara_metadata_reader(metadata_rel: str) -> DatasetReader:
     return read
 
 
-# --- CATALINA (single speaker, emotional) ----------------------------------
+# --- Emotional corpora (CATALINA, TIBI) ------------------------------------
 
 
-# Romanian emotion word (metadata) -> English token used in the renamed subset
-# (`catalina_<token>_NNNN.wav`). Only needed to place the renamed files.
-CATALINA_EMOTION_MAP = {
+# Romanian emotion word (metadata) -> English token used in the per-emotion
+# speaker slots (`catalina_angry`, `tibi_happy`) and in CATALINA's renamed
+# files (`catalina_<token>_NNNN.wav`).
+RO_EMOTION_MAP = {
     "furios": "angry",
     "fericit": "happy",
     "neutru": "neutral",
@@ -225,7 +226,7 @@ def catalina_reader(corpus_root: Path, per_emotion_speaker: bool = False) -> Ite
             if len(parts) < 3:
                 continue
             path, emotion, text = parts
-            token = CATALINA_EMOTION_MAP.get(emotion.strip().lower(), emotion.strip().lower())
+            token = RO_EMOTION_MAP.get(emotion.strip().lower(), emotion.strip().lower())
             name = Path(path).name
             if name in existing:
                 rel_wav = f"wavs/{name}"
@@ -236,6 +237,50 @@ def catalina_reader(corpus_root: Path, per_emotion_speaker: bool = False) -> Ite
                 rel_wav = f"wavs/{bucket[k]}" if k < len(bucket) else f"wavs/{name}"
             speaker = f"catalina_{token}" if per_emotion_speaker else "catalina"
             yield Utterance(rel_wav=rel_wav, text=text.strip(), speaker=speaker)
+
+
+def emotion_reader(
+    speaker: str,
+    metadata_rel: str = "metadata.csv",
+    per_emotion_speaker: bool = True,
+) -> DatasetReader:
+    """`<rel_wav>|<emotion>|<text>` where the metadata path is already correct.
+
+    The straightforward sibling of `catalina_reader`: TIBI's rows point
+    directly at the file on disk (`data/calm-speaker-tibi-1.wav`), so there is
+    no stale prefix to rewrite and no renamed subset to pair by order. Emotion
+    words are Romanian and share `RO_EMOTION_MAP`; an unmapped word is used
+    verbatim (lowercased) so a new emotion still produces a usable slot.
+
+    With `per_emotion_speaker` (the default) the speaker is
+    ``<speaker>_<en-emotion>`` — one VITS speaker slot per emotion, which is
+    how emotion is selected at synthesis time.
+    """
+
+    def read(corpus_root: Path) -> Iterator[Utterance]:
+        metadata_path = corpus_root / metadata_rel
+        if not metadata_path.exists():
+            raise FileNotFoundError(f"metadata not found: {metadata_path}")
+        with metadata_path.open(encoding="utf-8") as handle:
+            for raw in handle:
+                line = raw.rstrip("\n")
+                if not line.strip():
+                    continue
+                parts = line.split("|", 2)
+                if len(parts) < 3:
+                    continue
+                rel_wav, emotion, text = (part.strip() for part in parts)
+                if not rel_wav:
+                    continue
+                token = emotion.lower()
+                token = RO_EMOTION_MAP.get(token, token)
+                yield Utterance(
+                    rel_wav=rel_wav,
+                    text=text,
+                    speaker=f"{speaker}_{token}" if per_emotion_speaker else speaker,
+                )
+
+    return read
 
 
 # --- Common Voice (Mozilla) ------------------------------------------------
