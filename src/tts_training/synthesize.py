@@ -33,14 +33,34 @@ from pathlib import Path
 import numpy as np
 import soundfile as sf
 
+from expressive_tts.preprocess.phonemizer import phonetics_only
 from expressive_tts.preprocess.pipeline import PreprocessPipeline
 from tts_training.postprocess import PostProcessConfig, postprocess
 
 
-def text_to_phonemes(text: str, pipeline: PreprocessPipeline | None = None) -> str:
+def text_to_phonemes(
+    text: str,
+    pipeline: PreprocessPipeline | None = None,
+    *,
+    phonetics_only_mode: bool = False,
+) -> str:
     """Run the frontend and return the accented IPA phoneme string the model
-    was trained on."""
+    was trained on.
+
+    `phonetics_only_mode` mirrors `data.manifest --phonetics-only`: normalize,
+    then hand the text straight to eSpeak, skipping Stanza. **Use whichever
+    mode built the training manifest.** The two paths disagree — the Stanza
+    path splits hyphenated clitics, rendering `s-a` as `sˈe ˈa` (the letter
+    name "se" plus "a") where eSpeak gives the correct `sˈa`. Romanian is full
+    of these (`m-am`, `ne-a`, `într-o`), and feeding the model strings shaped
+    unlike its training data degrades output in ways no loss curve reveals.
+    """
     pipeline = pipeline or PreprocessPipeline()
+    if phonetics_only_mode:
+        result = pipeline.process(text, include={"normalized"})
+        return phonetics_only(
+            result.normalized_text or result.clean_text or text
+        ).strip()
     result = pipeline.process(text, include={"phonemes"})
     return (result.phoneme_text or "").strip()
 
@@ -92,6 +112,13 @@ def main(argv: list[str] | None = None) -> None:
         "--postprocess", action="store_true",
         help="apply the realism filter chain after synthesis (postprocess.PostProcessConfig)",
     )
+    parser.add_argument(
+        "--phonetics-only", "--phonetics_only", dest="phonetics_only", action="store_true",
+        help=(
+            "phonemize with normalization + eSpeak only, skipping Stanza — match this to "
+            "how the training manifest was built (data.manifest --phonetics-only)"
+        ),
+    )
     parser.add_argument("--no-cuda", action="store_true", help="run on CPU")
     args = parser.parse_args(argv)
 
@@ -115,7 +142,7 @@ def main(argv: list[str] | None = None) -> None:
             print(f"  {name}")
         return
 
-    phonemes = text_to_phonemes(args.text)
+    phonemes = text_to_phonemes(args.text, phonetics_only_mode=args.phonetics_only)
     if not phonemes:
         raise SystemExit("frontend produced no phonemes for the given text")
 
