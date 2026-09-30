@@ -122,6 +122,15 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--no-cuda", action="store_true", help="run on CPU")
     args = parser.parse_args(argv)
 
+    # Phonemize BEFORE importing/constructing anything Coqui. Initializing the
+    # frontend's native stack (Stanza/eSpeak) after Coqui's has loaded
+    # segfaults the interpreter on the training box — with or without CUDA.
+    # Doing it in this order is the only sequence observed to work, and it
+    # costs nothing: --phonetics-only never loads Stanza at all.
+    phonemes = text_to_phonemes(args.text, phonetics_only_mode=args.phonetics_only)
+    if not phonemes and not args.list_speakers:
+        raise SystemExit("frontend produced no phonemes for the given text")
+
     # --- Coqui (lazy) -----------------------------------------------------
     from tts_training._coqui_compat import ensure_coqui_importable
 
@@ -141,10 +150,6 @@ def main(argv: list[str] | None = None) -> None:
         for name in speakers:
             print(f"  {name}")
         return
-
-    phonemes = text_to_phonemes(args.text, phonetics_only_mode=args.phonetics_only)
-    if not phonemes:
-        raise SystemExit("frontend produced no phonemes for the given text")
 
     if args.all_speakers:
         if not speakers:
